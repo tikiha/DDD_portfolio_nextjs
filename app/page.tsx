@@ -11,6 +11,20 @@ async function Page() {
       <Link href={"/svg"} className="mt-10 bg-slate-500 p-2 rounded-lg w-fit">
         svg カスタマイズ→
       </Link>
+
+      <Link
+        href={"/grid/column"}
+        className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
+      >
+        grid 12columnレイアウト→
+      </Link>
+
+      <Link
+        href={"/grid/row"}
+        className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
+      >
+        grid 12rowレイアウト→
+      </Link>
     </div>
   );
 }

@@ -1,9 +1,5 @@
 .svg {
-  width: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  // width: 300px;
   animation: fill 1s ease forwards 3s;
   path:nth-child(1) {
     stroke-dasharray: 500px;
@@ -35,7 +31,7 @@
 }
 
 .imgSvg {
-  width: 300px;
+  // width: 300px;
   position: absolute;
   left: 50%;
   top: 50%;
