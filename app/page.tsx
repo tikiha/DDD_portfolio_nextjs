@@ -4,7 +4,10 @@ import Link from "next/link";
 async function Page() {
   return (
     <div className="w-screen flex flex-col">
-      <Link href={"/blog"} className="mt-10 bg-slate-500 p-2 rounded-lg w-fit">
+      <Link
+        href={"/microcms"}
+        className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
+      >
         microcms blog test→
       </Link>
 
@@ -13,14 +16,14 @@ async function Page() {
       </Link>
 
       <Link
-        href={"/grid/column"}
+        href={"/grid/12column"}
         className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
       >
         grid 12columnレイアウト→
       </Link>
 
       <Link
-        href={"/grid/row"}
+        href={"/rowSlide"}
         className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
       >
         grid 12rowレイアウト→
