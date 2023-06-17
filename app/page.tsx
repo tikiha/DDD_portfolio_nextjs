@@ -10,8 +10,18 @@ import Link from "next/link";
 
 const Page = () => {
   return (
+<<<<<<< HEAD
     <main className="flex w-full h-[calc(100vh-12px)] pt-16 ">
       <HomeCarousel />
+=======
+    <div className="w-screen flex flex-col">
+      <Link
+        href={"/microcms"}
+        className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
+      >
+        microcms blog test→
+      </Link>
+>>>>>>> d2b074936bf5f96bd3afd662cccc26555aa4cc57
 
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light">
         <p className="text-base">
@@ -74,6 +84,7 @@ const Page = () => {
         }
       />
 
+<<<<<<< HEAD
       <div className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-blue-400 text-light p-10">
         <h1 className="text-4xl font-bold mb-10">Works</h1>
         <p>
@@ -126,6 +137,22 @@ const Page = () => {
         className="fixed w-screen h-full -z-50"
       />
     </main>
+=======
+      <Link
+        href={"/grid/12column"}
+        className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
+      >
+        grid 12columnレイアウト→
+      </Link>
+
+      <Link
+        href={"/rowSlide"}
+        className="mt-10 bg-slate-500 p-2 rounded-lg w-fit"
+      >
+        grid 12rowレイアウト→
+      </Link>
+    </div>
+>>>>>>> d2b074936bf5f96bd3afd662cccc26555aa4cc57
   );
 };
 
