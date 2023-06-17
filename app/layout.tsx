@@ -1,5 +1,9 @@
+"use client";
 import "../styles/globals.css";
+import "../styles/home.scss";
 import { Inter } from "next/font/google";
+import { useEffect, useRef } from "react";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,9 +17,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (scrollRef.current) {
+        if (e.deltaY > 0) scrollRef.current.scrollBy(100, 0);
+        if (e.deltaY < 0) scrollRef.current.scrollBy(-100, 0);
+      }
+    };
+    window.addEventListener("wheel", handleWheel);
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
   return (
     <html lang="ja">
-      <body className={` ${inter.className}`}>{children}</body>
+      <body className={`min-h-screen bg-light text-dark ${inter.className} `}>
+        <NavBar />
+
+        <div ref={scrollRef} className="h-full w-full overflow-x-auto flex">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
