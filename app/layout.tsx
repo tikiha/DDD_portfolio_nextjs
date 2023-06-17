@@ -34,7 +34,7 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="ja">
-      <body className={`min-h-screen bg-light text-dark ${inter.className} `}>
+      <body className={`min-h-screen text-dark bg-light ${inter.className} `}>
         <NavBar />
 
         <div ref={scrollRef} className="h-full w-full overflow-x-auto flex">
