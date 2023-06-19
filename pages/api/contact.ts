@@ -19,7 +19,8 @@ export default async function ConatactAPI(req, res) {
     },
   });
 
-  console.log(process.env.GMAILUSER);
+  console.log(process.env.GMAILPASSWORD);
+  console.log(transporter);
 
   const toHostMailData = {
     // from: "tiki1212hj@gmail.com",
@@ -37,8 +38,8 @@ export default async function ConatactAPI(req, res) {
   };
 
   await transporter.sendMail(toHostMailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
+    if (err) console.log(`エラーです。${err}`);
+    else console.log(`成功しました${info}`);
   });
 
   return res.send("成功しました");
