@@ -1,4 +1,3 @@
-"use client";
 import "../styles/globals.css";
 import "../styles/home.scss";
 import { Inter } from "next/font/google";
@@ -17,6 +16,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  "use client";
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
