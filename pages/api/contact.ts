@@ -36,9 +36,16 @@ export default async function ConatactAPI(req, res) {
     `,
   };
 
-  await transporter.sendMail(toHostMailData, function (err, info) {
-    if (err) console.log(`エラーです。${err}`);
-    else console.log(`成功しました${info}`);
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(toHostMailData, function (err, info) {
+      if (err) {
+        console.log(`エラーです。${err}`);
+        reject(err);
+      } else {
+        console.log(`成功しました${info}`);
+        resolve(info);
+      }
+    });
   });
 
   return res.send("成功しました");
