@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import "../styles/home.scss";
 import { Inter } from "next/font/google";
-// import { useEffect, useRef } from "react";
 import NavBar from "@/components/NavBar";
 import RowSlide from "@/components/RowSlide";
 
@@ -17,30 +16,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // "use client";
-  // const scrollRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   const handleWheel = (e) => {
-  //     if (scrollRef.current) {
-  //       if (e.deltaY > 0) scrollRef.current.scrollBy(100, 0);
-  //       if (e.deltaY < 0) scrollRef.current.scrollBy(-100, 0);
-  //     }
-  //   };
-  //   window.addEventListener("wheel", handleWheel);
-  //   // Cleanup on unmount
-  //   return () => {
-  //     window.removeEventListener("wheel", handleWheel);
-  //   };
-  // }, []);
   return (
     <html lang="ja">
       <body className={`min-h-screen text-dark bg-light ${inter.className} `}>
         <NavBar />
         <RowSlide>{children}</RowSlide>
-        {/* <div ref={scrollRef} className="h-full w-full overflow-auto flex">
-          {children}
-        </div> */}
       </body>
     </html>
   );

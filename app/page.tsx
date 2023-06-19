@@ -1,8 +1,6 @@
-"use client";
 import Footer from "@/components/Footer";
-import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import officePic from "./../public/officePic.jpg";
+import officePic from "./../public/OfficePic/officePic.jpg";
 import HomeCarousel from "@/components/HomeCarousel";
 import { HomeCarouselFramer } from "@/components/HomeCarouselFramer";
 import Works from "@/components/Works";

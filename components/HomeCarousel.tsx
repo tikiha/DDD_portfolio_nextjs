@@ -4,10 +4,10 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const images = [
-  "/officePic1.png",
-  "/officePic2.png",
-  "/officePic3.png",
-  "/officePic4.png",
+  "/OfficePic/officePic1.png",
+  "/OfficePic/officePic2.png",
+  "/OfficePic/officePic3.png",
+  "/OfficePic/officePic4.png",
 ]; // ここに表示したい画像のURLを設定
 const captions = ["Caption 1", "Caption 2", "Caption 3", "Caption 4"]; // ここに画像に対応するキャプションを設定
 
