@@ -19,8 +19,6 @@ export default async function ConatactAPI(req, res) {
     },
   });
 
-  console.log(transporter);
-
   const toHostMailData = {
     // from: "tiki1212hj@gmail.com",
     to: "yskhj0316@gmail.com",

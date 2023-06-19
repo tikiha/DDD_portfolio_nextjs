@@ -28,7 +28,6 @@ const ContactConfirm = ({ formData, setStep }) => {
       },
       body: JSON.stringify(formData),
     });
-    console.log(response);
 
     if (response.ok) {
       console.log("Message sent successfully");
