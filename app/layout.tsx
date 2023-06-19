@@ -17,7 +17,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={`min-h-screen text-dark bg-light ${inter.className} `}>
         <NavBar />
 
-        <div ref={scrollRef} className="h-full w-full overflow-x-auto flex">
+        <div ref={scrollRef} className="h-full w-full overflow-auto flex">
           {children}
         </div>
       </body>

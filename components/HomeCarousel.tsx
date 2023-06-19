@@ -44,7 +44,7 @@ function HomeCarousel() {
   const [index, setIndex] = useState(0);
   const [showCaption, setShowCaption] = useState(false);
 
-  const intervalId = useRef(null);
+  const intervalId = useRef<NodeJS.Timeout | null>(null);
 
   const setSlideInterval = () => {
     intervalId.current = setInterval(() => {

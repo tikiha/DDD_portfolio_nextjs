@@ -1,8 +1,10 @@
 import classes from "./styles.module.scss";
 import { microcms } from "@/lib/microcmsClient";
 import Image from "next/image";
+import Link from "next/link";
 
 import React from "react";
+import NewsCarousel from "./NewsCarousel";
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -25,39 +27,79 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   const { id: articleId } = params;
-  const article = await microcms.get({
+
+  const articles = await microcms.get({
     endpoint: "blogs",
-    contentId: articleId,
   });
+  const targetIndex = articles.contents.findIndex(
+    (article) => article.id === articleId
+  );
+  const targetArticle = articles.contents[targetIndex];
+  const nextArticle =
+    targetIndex > 0 ? articles.contents[targetIndex - 1] : null;
+  const prevArticle =
+    targetIndex < articles.contents.length - 1
+      ? articles.contents[targetIndex + 1]
+      : null;
 
   return (
     <main className="w-[calc(100vw-12px)] h-full bg-light">
-      <div className="h-full mx-auto px-4 mt-16 w-full lg:w-[1280px]">
+      <div className="h-full px-4 mx-auto mt-16 w-full xl:w-[1280px]">
         <div className="pt-6 pb-4">
-          Home {">"} News {">"} {article.title}
+          Home {">"} News {">"} {targetArticle.title}
         </div>
-        <span className="border w-screen absolute left-0" />
-        <div>
-          <div>
-            <span>{formatDate(article.publishedAt)}</span>
-            <span>{formatDate(article.revisedAt)}</span>
-          </div>
-          <div className={classes.title}>{article.title}</div>
-          <div className="w-full overflow-hidden aspect-[16/9] relative">
-            <Image
-              src={article.eyecatch.url}
-              alt={"eyecatch"}
-              fill
-              className="object-cover object-center"
-            />
-          </div>
-
-          <div
-            className={classes.html}
-            dangerouslySetInnerHTML={{ __html: `${article.content}` }}
+        <span className="border w-[calc(100vw-12px)] absolute left-0" />
+        <div className="text-sm px-12 py-10 absolute left-1/2 top-36 -translate-x-1/2 z-10 bg-light ">
+          <span>{formatDate(targetArticle.publishedAt)}&nbsp;</span>
+          <span>{formatDate(targetArticle.revisedAt)}</span>
+          <h1 className="text-3xl font-bold mt-2  w-2/3 lg:w-[1024px]">
+            {targetArticle.title}
+          </h1>
+        </div>
+        <div className="w-full overflow-hidden mt-24 aspect-[16/9] relative ">
+          <Image
+            src={targetArticle.eyecatch?.url}
+            alt={"eyecatch"}
+            fill
+            className="object-cover object-center"
           />
         </div>
+
+        <div className="mt-16 w-2/3 lg:w-[1000px] bg-red-500 flex flex-col mx-auto mb-20">
+          <div
+            dangerouslySetInnerHTML={{ __html: `${targetArticle.content}` }}
+          />
+          <ul className="flex mt-16 space-x-2 bg-green-500">
+            <li>tweet</li>
+            <li>share</li>
+          </ul>
+          <div className="mt-16 flex w-full h-full bg-white">
+            <div className="w-1/2 flex items-center justify-center border-r">
+              {prevArticle ? (
+                <Link
+                  href={`news/${prevArticle.id}`}
+                  className="w-full h-full p-10 hover:text-dark/60"
+                >
+                  <span>{"<"}</span>
+                  {prevArticle.title}
+                </Link>
+              ) : null}
+            </div>
+            <div className="w-1/2 flex items-center justify-center">
+              {nextArticle ? (
+                <Link
+                  href={`news/${nextArticle.id}`}
+                  className="w-full h-full p-10 text-center hover:text-dark/60"
+                >
+                  {nextArticle.title}
+                  <span>{">"}</span>
+                </Link>
+              ) : null}
+            </div>
+          </div>
+        </div>
       </div>
+      <NewsCarousel articles={articles} />
     </main>
   );
 }
