@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <main className="flex w-full h-[calc(100vh-12px)] pt-16">
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light">
-        <p className="text-base">
+        <p className="text-base leading-loose">
           私たちの制作実績です。テーマのカスタマイズからオリジナルテーマの開発まで幅広く対応いたします。
         </p>
       </div>
@@ -30,7 +30,7 @@ const Page = () => {
         />
       </div>
       <div className="flex-shrink-0 h-full w-1/3 bg-light flex items-center justify-center px-10">
-        <p className="text-base">
+        <p className="text-base leading-loose">
           ご予算に合わせた提案、カスタマイズを行います。些細なご質問でも構いません。お気軽にご相談ください。
         </p>
       </div>

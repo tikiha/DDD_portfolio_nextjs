@@ -12,7 +12,7 @@ const Page = () => {
       <HomeCarousel />
 
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light">
-        <p className="text-base">
+        <p className="text-base leading-loose">
           静的サイトからCMS導入どの後の運用まで。 Webに関する知識がない方に
           「優しい」Webサイトをお届けいたします。
         </p>
@@ -24,15 +24,16 @@ const Page = () => {
           fill
           alt={"About Pic"}
           className="h-full object-cover object-left"
+          priority
         />
       </div>
       <div className="flex-shrink-0 h-full w-1/2 flex flex-col items-center justify-center px-10 bg-light">
-        <p className="text-2xl font-bold">
+        <p className="text-2xl font-bold leading-relaxed">
           「優しい」を届ける。
           <br />
           それが私たちの使命です。
         </p>
-        <p className="text-base">
+        <p className="mt-6 text-base leading-loose">
           小さな組織だからできる、細やかで迅速なサポート
           <br />
           お客様へ寄り添い、不安や悩みの解決をお手伝いいたします。
@@ -74,7 +75,7 @@ const Page = () => {
 
       <div className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-blue-400 text-light p-10">
         <h1 className="text-4xl font-bold mb-10">Works</h1>
-        <p>
+        <p className="text-base leading-loose">
           Webサイトに訪れたユーザー目線で、ユーザビリティの高いサイト制作を行います。ブログ投稿機能、プラグインを用いてご希望に応じたカスタマイズをいたします。
         </p>
       </div>
@@ -82,7 +83,7 @@ const Page = () => {
       <div className="flex-shrink-0 h-full w-1/3" />
 
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light">
-        <p className="text-base">
+        <p className="text-base leading-loose">
           静的サイトからCMS導入どの後の運用まで。 Webに関する知識がない方に
           「優しい」Webサイトをお届けいたします。
         </p>
@@ -95,18 +96,24 @@ const Page = () => {
           fill
           alt={"Contact Pic"}
           className="h-full object-cover object-center"
+          priority
         />
       </div>
 
       <div className="flex-shrink-0 flex flex-col h-full w-1/2 bg-light">
-        <div className="h-1/2 flex flex-col items-center justify-center p-10">
-          <h2>ご意見をお聞かせください</h2>
-          <p>
+        <div className="h-1/2 flex flex-col justify-between p-10 px-24">
+          <h2 className="text-2xl font-bold">ご意見をお聞かせください</h2>
+          <p className="mt-10 leading-loose">
             ホームページ制作やリニューアルのご依頼・ご相談はこちらからお問い合わせください。些細なことでも構いません。お気軽にご相談ください。
           </p>
-          <Link className="bg-green-300" href={"/contact"}>
-            お問い合わせへ
-          </Link>
+          <div className="flex justify-center">
+            <Link
+              className="bg-green-300 mt-10 rounded-lg py-4 px-10"
+              href={"/contact"}
+            >
+              お問い合わせへ
+            </Link>
+          </div>
         </div>
         <div className="h-1/2 w-full relative">
           <Image
@@ -114,6 +121,7 @@ const Page = () => {
             fill
             alt={"Consul Pic"}
             className="w-full object-cover object-center"
+            priority
           />
         </div>
       </div>
@@ -122,6 +130,7 @@ const Page = () => {
         src={officePic}
         alt={"office"}
         className="fixed w-screen h-full -z-50"
+        priority
       />
     </main>
   );

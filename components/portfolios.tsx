@@ -39,7 +39,7 @@ const IMacCustom = ({ src }) => {
 
 const Portfolios = () => {
   return (
-    <div className="flex-shrink-0 h-full w-screen p-20 bg-light grid grid-cols-3 gap-28">
+    <div className="flex-shrink-0 h-full w-screen p-32 bg-light grid grid-cols-3 gap-28">
       <IMacCustom src={"/Pic/IMac.png"} />
       <IMacCustom src={"/Pic/IMac.png"} />
       <IMacCustom src={"/Pic/IMac.png"} />

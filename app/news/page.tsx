@@ -55,7 +55,7 @@ async function Page() {
                 </div>
               )}
             </Link>
-            <div className="h-20 w-full overflow-hidden leading-relaxed">
+            <div className="h-24 w-full overflow-hidden leading-loose">
               {article.content}
             </div>
           </div>
