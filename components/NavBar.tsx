@@ -4,7 +4,6 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import DDDLogo from "../public/DDD.svg";
-// import { DDDLogo } from "./Icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const pathname = usePathname();
@@ -28,8 +27,8 @@ const NavBar = () => {
       className="fixed w-[95%] mx-[2.5%] h-16 top-3 bg-light/90 shadow-xl rounded-lg
     flex items-center justify-between px-10 z-30"
     >
-      <Link href={"/"} className="h-full">
-        <Image src={DDDLogo} alt={"DDDLogo"} className="h-full w-auto" />
+      <Link href={"/"} className="h-full flex items-center">
+        <Image src={DDDLogo} alt={"DDDLogo"} className="h-[160%] w-auto" />
       </Link>
       {/* <DDDLogo className="w-16" /> */}
       <div className="">

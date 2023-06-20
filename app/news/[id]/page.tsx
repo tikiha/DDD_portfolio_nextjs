@@ -2,6 +2,7 @@ import classes from "./styles.module.scss";
 import { microcms } from "@/lib/microcmsClient";
 import Image from "next/image";
 import Link from "next/link";
+import { Calendar, RefreshCcw } from "lucide-react";
 
 import React from "react";
 import NewsCarousel from "./NewsCarousel";
@@ -49,10 +50,14 @@ export default async function Page({ params }) {
           Home {">"} News {">"} {targetArticle.title}
         </div>
         <span className="border w-[calc(100vw-12px)] absolute left-0" />
-        <div className="text-sm px-12 py-10 absolute left-1/2 top-36 -translate-x-1/2 z-10 bg-light ">
-          <span>{formatDate(targetArticle.publishedAt)}&nbsp;</span>
-          <span>{formatDate(targetArticle.revisedAt)}</span>
-          <h1 className="text-3xl font-bold mt-2  w-2/3 lg:w-[1024px]">
+        <div className="text-sm px-12 py-10 absolute left-1/2 top-36 -translate-x-1/2 z-10 bg-light">
+          <div className="flex items-center">
+            <Calendar size={16} className="stroke-dark" />
+            <span>&nbsp;{formatDate(targetArticle.publishedAt)}</span>
+            <RefreshCcw size={16} className="ml-3 stroke-dark" />
+            <span>&nbsp;{formatDate(targetArticle.revisedAt)}</span>
+          </div>
+          <h1 className="text-3xl font-bold mt-2 text-center w-2/3 lg:w-[1024px]">
             {targetArticle.title}
           </h1>
         </div>

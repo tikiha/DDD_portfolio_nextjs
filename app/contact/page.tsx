@@ -4,6 +4,7 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 import ContactConfirm from "./ContactConfirm";
 import ContactSuccess from "./ContactSuccess";
+import { ChevronUp } from "lucide-react";
 
 const Page = () => {
   const [formData, setFormData] = useState(null);
@@ -44,7 +45,7 @@ const Page = () => {
               });
             }}
           >
-            ↑
+            <ChevronUp size={36} strokeWidth={1} className="opacity-80" />
           </button>
         </div>
         <div className="py-6 flex items-center justify-center">

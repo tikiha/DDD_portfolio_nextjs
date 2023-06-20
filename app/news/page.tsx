@@ -3,6 +3,7 @@ import { microcms } from "../../lib/microcmsClient";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import { Calendar } from "lucide-react";
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -30,7 +31,10 @@ async function Page() {
           key={article.id}
           className="flex-shrink-0 w-1/4 h-full border-r border-slate-400 px-6 py-10"
         >
-          <span className="w-full">{formatDate(article.revisedAt)}</span>
+          <div className="w-full flex items-center">
+            <Calendar size={16} className="stroke-light" />
+            <span>&nbsp;{formatDate(article.revisedAt)}</span>
+          </div>
           <div className="h-full w-full flex flex-col items-center justify-between py-32">
             <Link
               href={`news/${article.id}`}
@@ -55,7 +59,7 @@ async function Page() {
                 </div>
               )}
             </Link>
-            <div className="h-24 w-full overflow-hidden leading-loose">
+            <div className="h-24 w-full text-base/loose line-clamp-3">
               {article.content}
             </div>
           </div>

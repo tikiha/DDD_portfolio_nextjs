@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Inspect } from "lucide-react";
 
 const IMacCustom = ({ src }) => {
   const [hover, setHover] = useState(false);
@@ -21,18 +22,20 @@ const IMacCustom = ({ src }) => {
           width={100}
           height={100}
           className="h-full w-auto"
+          priority
         />
+        {hover && (
+          <motion.div
+            initial={{ clipPath: "circle(0% at 50% 50%)" }}
+            animate={{ clipPath: "circle(150% at 50% 50%)" }}
+            transition={{ duration: 0.7 }}
+            className="absolute bottom-5 -left-5 bg-primary px-4 py-2 text-light rounded-lg w-fit flex items-center"
+          >
+            三菱商事
+            <Inspect size={16} className="ml-4" />
+          </motion.div>
+        )}
       </Link>
-      {hover && (
-        <motion.div
-          initial={{ clipPath: "circle(0% at 50% 50%)" }}
-          animate={{ clipPath: "circle(150% at 50% 50%)" }}
-          transition={{ duration: 0.7 }}
-          className="absolute bottom-5 -left-5 bg-primary px-4 py-2 text-light rounded-lg w-fit"
-        >
-          三菱商事　→
-        </motion.div>
-      )}
     </motion.div>
   );
 };

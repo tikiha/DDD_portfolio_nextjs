@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const images = [
   "/OfficePic/officePic1.png",
@@ -12,29 +14,48 @@ const images = [
 const captions = ["Caption 1", "Caption 2", "Caption 3", "Caption 4"]; // ここに画像に対応するキャプションを設定
 
 function SlideArrow({ direction, clickFunction, className = "" }) {
-  const symbol = direction === "left" ? "<" : ">";
   return (
     <button
-      className={`text-light absolute top-1/2 cursor-pointer text-4xl z-20 ${className}`}
+      className={`text-light absolute top-1/2 cursor-pointer z-20 ${className}`}
       onClick={clickFunction}
     >
-      {symbol}
+      {direction === "left" ? (
+        <ChevronLeft
+          size={48}
+          className="stroke-slate-50/80 hover:scale-110 hover:stroke-slate-50"
+        />
+      ) : (
+        <ChevronRight
+          size={48}
+          className="stroke-slate-50/80 hover:scale-110 hover:stroke-slate-50"
+        />
+      )}
     </button>
   );
 }
 
 function Indicator({ index, length }) {
   return (
-    <div className="absolute left-1/2 bottom-10 -translate-x-1/2 z-20">
+    <div className="absolute left-1/2 bottom-10 -translate-x-1/2 z-20 flex space-x-4">
       {Array(length)
         .fill(1)
         .map((_, i) => (
-          <span
+          <svg
             key={i}
-            className={` ${i === index ? "text-light" : "text-dark"}`}
+            viewBox="0 0 100 100"
+            width={12}
+            height={12}
+            xmlns="http://www.w3.org/2000/svg"
+            className={`cursor-pointer ${
+              i === index
+                ? "fill-light/80"
+                : i + 1 === index || i - 1 === index
+                ? "fill-light/60"
+                : "fill-light/40"
+            }`}
           >
-            •
-          </span>
+            <circle cx="50" cy="50" r="50" />
+          </svg>
         ))}
     </div>
   );
@@ -126,13 +147,13 @@ function HomeCarousel() {
       <SlideArrow
         direction="left"
         clickFunction={slideLeft}
-        className="left-10"
+        className="left-10 hover:animate-bounceLeft"
       />
 
       <SlideArrow
         direction="right"
         clickFunction={slideRight}
-        className="right-10"
+        className="right-10 hover:animate-bounceRight"
       />
       <Indicator index={index} length={images.length} />
     </div>

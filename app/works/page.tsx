@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <main className="flex w-full h-[calc(100vh-12px)] pt-16">
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light">
-        <p className="text-base leading-loose">
+        <p className="text-base/loose">
           私たちの制作実績です。テーマのカスタマイズからオリジナルテーマの開発まで幅広く対応いたします。
         </p>
       </div>
@@ -18,6 +18,7 @@ const Page = () => {
           fill
           alt={"Works Pic"}
           className="h-full object-cover object-left"
+          priority
         />
       </div>
       <Portfolios />
@@ -27,10 +28,11 @@ const Page = () => {
           fill
           alt={"Happy Pic"}
           className="h-full object-cover object-center"
+          priority
         />
       </div>
       <div className="flex-shrink-0 h-full w-1/3 bg-light flex items-center justify-center px-10">
-        <p className="text-base leading-loose">
+        <p className="text-base/loose">
           ご予算に合わせた提案、カスタマイズを行います。些細なご質問でも構いません。お気軽にご相談ください。
         </p>
       </div>
