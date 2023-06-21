@@ -16,18 +16,18 @@ const captions = ["Caption 1", "Caption 2", "Caption 3", "Caption 4"]; // ここ
 function SlideArrow({ direction, clickFunction, className = "" }) {
   return (
     <button
-      className={`text-light absolute top-1/2 cursor-pointer z-20 ${className}`}
+      className={`text-light cursor-pointer z-20 ${className}`}
       onClick={clickFunction}
     >
       {direction === "left" ? (
         <ChevronLeft
           size={48}
-          className="stroke-slate-50/80 hover:scale-110 hover:stroke-slate-50"
+          className="stroke-slate-50/80 hover:scale-110 hover:stroke-slate-50 max-lg:w-10"
         />
       ) : (
         <ChevronRight
           size={48}
-          className="stroke-slate-50/80 hover:scale-110 hover:stroke-slate-50"
+          className="stroke-slate-50/80 hover:scale-110 hover:stroke-slate-50 max-lg:w-10"
         />
       )}
     </button>
@@ -36,7 +36,7 @@ function SlideArrow({ direction, clickFunction, className = "" }) {
 
 function Indicator({ index, length }) {
   return (
-    <div className="absolute left-1/2 bottom-10 -translate-x-1/2 z-20 flex space-x-4">
+    <div className="absolute left-1/2 bottom-10 -translate-x-1/2 z-20 flex space-x-4 max-lg:bottom-2">
       {Array(length)
         .fill(1)
         .map((_, i) => (
@@ -46,7 +46,7 @@ function Indicator({ index, length }) {
             width={12}
             height={12}
             xmlns="http://www.w3.org/2000/svg"
-            className={`cursor-pointer ${
+            className={`cursor-pointer max-lg:w-2 ${
               i === index
                 ? "fill-light/80"
                 : i + 1 === index || i - 1 === index
@@ -110,51 +110,51 @@ function HomeCarousel() {
     <div className="w-2/3 h-full flex-shrink-0 relative max-lg:w-full max-lg:h-[70vh]">
       {/* <div key={index}> */}
       <div className="w-full h-full absolute bg-dark opacity-30 z-10 " />
-      <AnimatePresence>
-        <motion.img
-          key={index}
-          src={images[index]}
-          width={500}
-          height={500}
-          alt=""
-          className="w-full h-full absolute"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+      <div className="flex items-center h-full">
+        <SlideArrow
+          direction="left"
+          clickFunction={slideLeft}
+          className="hover:animate-bounceLeft"
         />
-        <motion.div
-          key={index}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 2 }}
-          className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20`}
-        >
-          <h1>{captions[index]}</h1>
-          <h1 className="text-4xl text-light font-bold text-center mb-4 leading-relaxed max-lg:text-2xl">
-            グッとくる
-            <br />
-            HPお任せください。
-          </h1>
-          <p className="text-base text-light leading-loose max-lg:text-sm">
-            元ラガーマンのWebデザイナー二人組です。あなたの要望に全力で”トライ”します。
-            組織名にある「Driven」はラグビー由来の熱意のある献身的な姿勢のこと。
-            HP制作など、サービス詳細は以下のボタンからご覧ください。
-          </p>
-        </motion.div>
-      </AnimatePresence>
+        <AnimatePresence>
+          <motion.img
+            key={index}
+            src={images[index]}
+            width={500}
+            height={500}
+            alt=""
+            className="w-full h-full absolute"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          />
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2, duration: 2 }}
+            className={` z-20 w-full px-8`}
+          >
+            <h1 className="text-4xl/relaxed text-light font-bold text-center mb-4 max-lg:text-2xl/relaxed">
+              グッとくる
+              <br />
+              HPお任せください。
+            </h1>
+            <p className="text-light text-base/loose max-lg:text-xs/loose">
+              元ラガーマンのWebデザイナー二人組です。あなたの要望に全力で”トライ”します。
+              組織名にある「Driven」はラグビー由来の熱意のある献身的な姿勢のこと。
+              HP制作など、サービス詳細は以下のボタンからご覧ください。
+            </p>
+          </motion.div>
+        </AnimatePresence>
 
-      <SlideArrow
-        direction="left"
-        clickFunction={slideLeft}
-        className="left-10 hover:animate-bounceLeft"
-      />
-
-      <SlideArrow
-        direction="right"
-        clickFunction={slideRight}
-        className="right-10 hover:animate-bounceRight"
-      />
+        <SlideArrow
+          direction="right"
+          clickFunction={slideRight}
+          className="right-10 hover:animate-bounceRight max-lg:right-2"
+        />
+      </div>
       <Indicator index={index} length={images.length} />
     </div>
   );
