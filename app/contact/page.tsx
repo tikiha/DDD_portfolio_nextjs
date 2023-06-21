@@ -22,6 +22,7 @@ const Page = () => {
           fill
           alt={"ConatctHome Pic"}
           className="w-full object-cover object-center"
+          priority
         />
       </div>
       <div className="flex-shrink-0 flex items-center py-6 text-dark mx-auto xl:w-[1280px] w-full px-4">
