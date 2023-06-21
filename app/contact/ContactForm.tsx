@@ -6,9 +6,10 @@ const CustomForm = ({ title, name, type }) => {
     <>
       <label
         htmlFor={name}
-        className="col-span-4 border border-collapse flex items-center"
+        className="col-span-4 border border-collapse flex items-center px-2"
       >
         {title}
+        <span className="text-red-500">*</span>
       </label>
       <div className="col-span-8 border border-collapse flex items-center p-6">
         <input
@@ -44,7 +45,8 @@ function ContactForm({ setFormData, setStep }) {
   return (
     <form
       onSubmit={handleConfirm}
-      className="flex-shrink-0 mx-auto lg:w-[1024px] w-full px-4 grid grid-cols-12 border-collapse"
+      className="flex-shrink-0 mx-auto lg:w-[1024px] w-full px-4 grid grid-cols-12 border-collapse 
+      max-lg:text-sm max-md:text-xs"
     >
       <CustomForm title={"会社名または屋号"} name={"company"} type={"text"} />
       <CustomForm title={"担当者様のお名前"} name={"name"} type={"text"} />
@@ -57,9 +59,9 @@ function ContactForm({ setFormData, setStep }) {
       />
       <label
         htmlFor="name"
-        className="col-span-4 border border-collapse flex items-center"
+        className="col-span-4 border border-collapse flex items-center px-2"
       >
-        お問い合わせ項目
+        お問い合わせ項目<span className="text-red-500">*</span>
       </label>
       <div className="col-span-8 border border-collapse flex items-center p-6">
         <select
@@ -80,9 +82,9 @@ function ContactForm({ setFormData, setStep }) {
       </div>
       <label
         htmlFor="name"
-        className="col-span-4 border border-collapse flex items-center"
+        className="col-span-4 border border-collapse flex items-center px-2"
       >
-        お問い合わせ内容
+        お問い合わせ内容<span className="text-red-500">*</span>
       </label>
       <div className="col-span-8 border border-collapse flex items-center p-6">
         <textarea

@@ -1,10 +1,19 @@
 import "../styles/globals.css";
 import "../styles/home.scss";
-import { Inter } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import RowSlide from "@/components/RowSlide";
+import { Noto_Sans_JP, Montserrat } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const notojp = Noto_Sans_JP({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-notojp",
+});
+
+const mont = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-mont",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={`min-h-screen text-dark bg-light ${inter.className} `}>
+      <body
+        className={`min-h-screen text-dark bg-light ${mont.variable} ${notojp.variable} font-notojp `}
+      >
         <NavBar />
         <RowSlide>{children}</RowSlide>
       </body>

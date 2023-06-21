@@ -5,13 +5,14 @@ $titlecolor: #637575;
 }
 
 .html {
-  color: blue;
-
+  & h1 {
+    font-size: 30px;
+  }
   & h2 {
-    color: red;
+    font-size: 20px;
   }
 
   & p {
-    color: aqua;
+    font-size: 10px;
   }
 }

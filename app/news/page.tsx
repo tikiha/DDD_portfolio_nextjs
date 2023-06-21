@@ -4,38 +4,31 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import { Calendar } from "lucide-react";
-
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  const year = date.getUTCFullYear();
-  const monthNum = date.getUTCMonth() + 1;
-  const dayNum = date.getUTCDate();
-
-  const month = monthNum < 10 ? `0${monthNum}` : monthNum;
-  const day = dayNum < 10 ? `0${dayNum}` : dayNum;
-
-  return `${year}.${month}.${day}`;
-};
+import FormatDate from "@/lib/formatDate";
 
 async function Page() {
   const articles = await microcms.get({ endpoint: "blogs" });
 
   return (
-    <div className="flex w-full h-[calc(100vh-12px)] pt-16 text-light">
+    <div className="flex w-full h-[calc(100vh-12px)] pt-16 text-light max-lg:flex-col max-lg:h-full">
       <div className="bg-gradient-original w-full h-full fixed -z-10" />
-      <div className="flex-shrink-0 w-1/3 h-full flex items-center justify-center border-r border-slate-400">
-        <h1 className="text-4xl text-light ">NEWS</h1>
+      <div
+        className="flex-shrink-0 w-1/3 h-full flex items-center justify-center border-r border-slate-400
+      max-lg:w-full max-lg:h-[33vh] max-lg:border-b"
+      >
+        <h1 className="font-mont font-bold text-4xl text-light ">NEWS</h1>
       </div>
       {articles.contents.map((article) => (
         <div
           key={article.id}
-          className="flex-shrink-0 w-1/4 h-full border-r border-slate-400 px-6 py-10"
+          className="flex-shrink-0 w-1/4 h-full border-r border-slate-400 px-6 py-10 
+          max-lg:w-full max-lg:h-fit max-lg:border-b max-lg:p-4"
         >
           <div className="w-full flex items-center">
             <Calendar size={16} className="stroke-light" />
-            <span>&nbsp;{formatDate(article.revisedAt)}</span>
+            <span>&nbsp;{FormatDate(article.publishedAt)}</span>
           </div>
-          <div className="h-full w-full flex flex-col items-center justify-between py-32">
+          <div className="h-full w-full flex flex-col items-center justify-between py-32 max-lg:py-10">
             <Link
               href={`news/${article.id}`}
               className="text-xl font-semibold h-14 hover:text-primary duration-300"
@@ -59,7 +52,7 @@ async function Page() {
                 </div>
               )}
             </Link>
-            <div className="h-24 w-full text-base/loose line-clamp-3">
+            <div className="w-full text-base/loose line-clamp-3">
               {article.content}
             </div>
           </div>

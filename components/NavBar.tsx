@@ -10,7 +10,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} ${
+      className={`font-mont ${className} ${
         pathname === href
           ? "text-primary"
           : "hover:text-primary  ease duration-200"
@@ -25,13 +25,13 @@ const NavBar = () => {
   return (
     <nav
       className="fixed w-[95%] mx-[2.5%] h-16 top-3 bg-light/90 shadow-xl rounded-lg
-    flex items-center justify-between px-10 z-30"
+    flex items-center justify-between px-10 z-30 max-lg:px-4"
     >
       <Link href={"/"} className="h-full flex items-center">
-        <Image src={DDDLogo} alt={"DDDLogo"} className="h-[160%] w-auto" />
+        <Image src={DDDLogo} alt={"DDDLogo"} className="h-[150%] w-auto" />
       </Link>
       {/* <DDDLogo className="w-16" /> */}
-      <div className="">
+      <div className="max-lg:hidden">
         <CustomLink href={"/"} title={"Home"} className="mr-4" />
         <CustomLink href={"/news"} title={"News"} className="mx-4" />
         <CustomLink href={"/works"} title={"Works"} className="mx-4" />

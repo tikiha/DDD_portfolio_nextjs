@@ -2,23 +2,24 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import officePic from "./../public/OfficePic/officePic.jpg";
 import HomeCarousel from "@/components/HomeCarousel";
-import { HomeCarouselFramer } from "@/components/HomeCarouselFramer";
 import Works from "@/components/Works";
 import Link from "next/link";
 
 const Page = () => {
   return (
-    <main className="flex w-full h-[calc(100vh-12px)] pt-16 ">
+    <main className="flex w-full h-[calc(100vh-12px)] pt-16 max-lg:flex-col max-lg:h-full">
       <HomeCarousel />
 
-      <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light">
+      <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[33vh]">
         <p className="text-base/loose">
           静的サイトからCMS導入どの後の運用まで。 Webに関する知識がない方に
           「優しい」Webサイトをお届けいたします。
         </p>
       </div>
-      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative">
-        <h1 className="z-10 text-4xl text-light font-semibold ">About US</h1>
+      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
+        <h1 className="font-mont z-10 text-4xl text-light font-bold ">
+          About US
+        </h1>
         <Image
           src="/Pic/About.png"
           fill
@@ -27,7 +28,7 @@ const Page = () => {
           priority
         />
       </div>
-      <div className="flex-shrink-0 h-full w-1/2 flex flex-col items-center justify-center px-10 bg-light">
+      <div className="flex-shrink-0 h-full w-1/2 flex flex-col items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[50vh]">
         <p className="text-2xl/relaxed font-bold">
           「優しい」を届ける。
           <br />
@@ -73,8 +74,11 @@ const Page = () => {
         }
       />
 
-      <div className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-blue-400 text-light p-10">
-        <h1 className="text-4xl font-bold mb-10">Works</h1>
+      <div
+        className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-blue-400 text-light p-10
+      max-lg:w-full max-lg:h-[50vh]"
+      >
+        <h1 className="font-mont text-4xl font-bold mb-10">Works</h1>
         <p className="text-base/loose">
           Webサイトに訪れたユーザー目線で、ユーザビリティの高いサイト制作を行います。ブログ投稿機能、プラグインを用いてご希望に応じたカスタマイズをいたします。
         </p>
@@ -82,15 +86,20 @@ const Page = () => {
 
       <div className="flex-shrink-0 h-full w-1/3" />
 
-      <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light">
+      <div
+        className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light
+      max-lg:w-full max-lg:h-[33vh]"
+      >
         <p className="text-base/loose">
           静的サイトからCMS導入どの後の運用まで。 Webに関する知識がない方に
           「優しい」Webサイトをお届けいたします。
         </p>
       </div>
 
-      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative">
-        <h1 className="z-10 text-4xl text-light font-semibold ">Contact</h1>
+      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
+        <h1 className="font-mont z-10 text-4xl text-light font-bold">
+          Contact
+        </h1>
         <Image
           src="/Pic/Contact.png"
           fill
@@ -100,16 +109,19 @@ const Page = () => {
         />
       </div>
 
-      <div className="flex-shrink-0 flex flex-col h-full w-1/2 bg-light">
-        <div className="h-1/2 flex flex-col justify-between p-10 px-24">
-          <h2 className="text-2xl font-bold">ご意見をお聞かせください</h2>
-          <p className="mt-10 text-base/loose">
+      <div className="flex-shrink-0 flex flex-col h-full w-1/2 bg-light max-lg:w-full max-lg:h-fit">
+        <div className="h-1/2 flex flex-col justify-between p-10 px-24 max-lg:p-10">
+          <h2 className="text-2xl font-bold max-lg:text-xl">
+            ご意見をお聞かせください
+          </h2>
+          <p className="mt-10 text-base/loose max-lg:text-sm/loose max-lg:mt-5">
             ホームページ制作やリニューアルのご依頼・ご相談はこちらからお問い合わせください。些細なことでも構いません。お気軽にご相談ください。
           </p>
           <div className="flex justify-center">
             <Link
               className="mt-10 rounded-lg py-4 px-10 relative border border-primary text-primary 
-              hover:text-light overflow-hidden group"
+              hover:text-light overflow-hidden group
+              max-lg:mt-5 max-lg:px-4 max-lg:text-sm max-lg:py-2"
               href={"/contact"}
             >
               <div className="w-full h-full bg-primary absolute -left-60 top-0 group-hover:translate-x-60 duration-500" />
@@ -117,7 +129,7 @@ const Page = () => {
             </Link>
           </div>
         </div>
-        <div className="h-1/2 w-full relative">
+        <div className="h-1/2 w-full relative max-lg:h-[33vh]">
           <Image
             src="/Pic/Consul.png"
             fill

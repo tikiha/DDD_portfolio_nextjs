@@ -10,6 +10,10 @@ module.exports = {
       aspectRatio: {
         "16/9": [16, 9],
       },
+      fontFamily: {
+        mont: ["var(--font-mont)"],
+        notojp: ["var(--font-notojp)"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -22,6 +26,7 @@ module.exports = {
         light: "#fcfcfc",
         primary: "#B63E96",
         primaryDark: "#58D6E9",
+        mute: "#a9a9a9",
       },
       animation: {
         "fade-in": "fadeIn 2s ease-in-out",
