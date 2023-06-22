@@ -38,9 +38,9 @@
 @media screen and (max-width: 767px) {
   :root {
     --4xl: 22px;
-    --2xl: 18px;
-    --lg: 14px;
-    --base: 12px;
+    --2xl: 20px;
+    --lg: 16px;
+    --base: 14px;
     --sm: 10px;
   }
 }

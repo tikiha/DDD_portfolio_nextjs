@@ -1,0 +1,9 @@
+:root {
+  --swiper-navigation-color: #222;
+  --swiper-pagination-color: #222;
+}
+
+.swiper-button-next:after {
+  position: absolute;
+  z-index: 30;
+}

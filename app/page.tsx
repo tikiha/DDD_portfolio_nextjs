@@ -4,6 +4,7 @@ import officePic from "./../public/OfficePic/officePic.jpg";
 import HomeCarousel from "@/components/HomeCarousel";
 import Works from "@/components/Works";
 import Link from "next/link";
+import HomeSwiper from "@/components/HomeSwiper";
 
 const Page = () => {
   return (
