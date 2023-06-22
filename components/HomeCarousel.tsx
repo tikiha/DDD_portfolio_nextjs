@@ -41,17 +41,17 @@ function Indicator({ index, length }) {
         .fill(1)
         .map((_, i) => (
           <svg
-            key={i}
+            key={`indicator ${i}`}
             viewBox="0 0 100 100"
             width={12}
             height={12}
             xmlns="http://www.w3.org/2000/svg"
             className={`cursor-pointer max-lg:w-2 ${
               i === index
-                ? "fill-light/80"
+                ? "fill-light opacity-80"
                 : i + 1 === index || i - 1 === index
-                ? "fill-light/60"
-                : "fill-light/40"
+                ? "fill-light opacity-60"
+                : "fill-light opacity-40"
             }`}
           >
             <circle cx="50" cy="50" r="50" />
@@ -107,9 +107,9 @@ function HomeCarousel() {
   };
 
   return (
-    <div className="w-2/3 h-full flex-shrink-0 relative max-lg:w-full max-lg:h-[70vh]">
+    <div className="w-2/3 h-full text-Light flex-shrink-0 relative max-lg:w-full max-lg:h-[70vh]">
       {/* <div key={index}> */}
-      <div className="w-full h-full absolute bg-dark opacity-30 z-10 " />
+      <div className="w-full h-full absolute bg-Dark/30 z-10 " />
       <div className="flex items-center h-full">
         <SlideArrow
           direction="left"
@@ -130,18 +130,18 @@ function HomeCarousel() {
             transition={{ duration: 1 }}
           />
           <motion.div
-            key={index}
+            key={`text ${index}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 2 }}
             className={` z-20 w-full px-8`}
           >
-            <h1 className="text-4xl/relaxed text-light font-bold text-center mb-4 max-lg:text-2xl/relaxed">
+            <h1 className="text-4xl/relaxed font-bold text-center mb-4">
               グッとくる
               <br />
               HPお任せください。
             </h1>
-            <p className="text-light text-base/loose max-lg:text-xs/loose">
+            <p className="text-base/loose">
               元ラガーマンのWebデザイナー二人組です。あなたの要望に全力で”トライ”します。
               組織名にある「Driven」はラグビー由来の熱意のある献身的な姿勢のこと。
               HP制作など、サービス詳細は以下のボタンからご覧ください。

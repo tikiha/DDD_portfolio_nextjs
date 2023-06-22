@@ -22,14 +22,22 @@ const NewsCarousel = ({ articles }) => {
     Articles = [...articles.contents];
   }
   return (
-    <div className="h-full w-full bg-white py-20">
+    <div className="h-full w-full bg-light py-20">
       <h1 className="font-mont font-bold text-2xl flex items-center justify-center mb-10">
         Latest news
       </h1>
       <Swiper
         className="w-full h-fit"
         spaceBetween={50}
-        slidesPerView={4}
+        slidesPerView={2}
+        breakpoints={{
+          1024: {
+            slidesPerView: 4,
+          },
+          768: {
+            slidesPerView: 3.2,
+          },
+        }}
         centeredSlides={true}
         mousewheel={true}
         autoplay={{
@@ -59,14 +67,14 @@ const NewsCarousel = ({ articles }) => {
                       className="hover:scale-110 duration-150 object-cover object-center"
                     />
                   ) : (
-                    <div className="w-full h-full bg-slate-300 flex items-center justify-center">
+                    <div className="w-full h-full bg-slate-300 flex items-center justify-center text-sm">
                       No Image
                     </div>
                   )}
                 </Link>
                 <Link
                   href={`news/${article.id}`}
-                  className="text-lg hover:text-primary duration-300"
+                  className="text-lg hover:text-primary duration-300 max-lg:text-base"
                 >
                   {article.title}
                 </Link>

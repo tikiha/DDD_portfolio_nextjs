@@ -17,7 +17,7 @@ const Page = () => {
         </p>
       </div>
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-4xl text-light font-bold ">
+        <h1 className="font-mont z-10 text-4xl text-Light font-bold ">
           About US
         </h1>
         <Image
@@ -75,7 +75,7 @@ const Page = () => {
       />
 
       <div
-        className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-blue-400 text-light p-10
+        className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-blue-400 text-Light p-10
       max-lg:w-full max-lg:h-[50vh]"
       >
         <h1 className="font-mont text-4xl font-bold mb-10">Works</h1>
@@ -97,7 +97,7 @@ const Page = () => {
       </div>
 
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-4xl text-light font-bold">
+        <h1 className="font-mont z-10 text-4xl text-Light font-bold">
           Contact
         </h1>
         <Image
@@ -111,17 +111,15 @@ const Page = () => {
 
       <div className="flex-shrink-0 flex flex-col h-full w-1/2 bg-light max-lg:w-full max-lg:h-fit">
         <div className="h-1/2 flex flex-col justify-between p-10 px-24 max-lg:p-10">
-          <h2 className="text-2xl font-bold max-lg:text-xl">
-            ご意見をお聞かせください
-          </h2>
-          <p className="mt-10 text-base/loose max-lg:text-sm/loose max-lg:mt-5">
+          <h2 className="text-2xl font-bold">ご意見をお聞かせください</h2>
+          <p className="mt-10 text-base/loose max-lg:mt-5">
             ホームページ制作やリニューアルのご依頼・ご相談はこちらからお問い合わせください。些細なことでも構いません。お気軽にご相談ください。
           </p>
           <div className="flex justify-center">
             <Link
               className="mt-10 rounded-lg py-4 px-10 relative border border-primary text-primary 
               hover:text-light overflow-hidden group
-              max-lg:mt-5 max-lg:px-4 max-lg:text-sm max-lg:py-2"
+              max-lg:mt-5 max-lg:px-4 max-lg:py-2"
               href={"/contact"}
             >
               <div className="w-full h-full bg-primary absolute -left-60 top-0 group-hover:translate-x-60 duration-500" />

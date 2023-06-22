@@ -12,7 +12,7 @@ const Page = () => {
         </p>
       </div>
       <div className="flex-shrink-0 h-full w-2/3 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-4xl text-light font-bold ">Works</h1>
+        <h1 className="font-mont z-10 text-4xl text-Light font-bold ">Works</h1>
         <Image
           src="/Pic/Works.png"
           fill

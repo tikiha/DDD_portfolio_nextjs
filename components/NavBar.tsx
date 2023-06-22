@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import React from "react";
-import { usePathname } from "next/navigation";
+import React, { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
-import DDDLogo from "../public/DDD.svg";
+import MobileNavMenu from "./MobileNavMenu";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const pathname = usePathname();
@@ -22,22 +22,86 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const NavBar = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const node = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (e) => {
+    if (
+      node.current?.contains(e.target) ||
+      buttonRef.current?.contains(e.target)
+    ) {
+      // inside click
+      return;
+    }
+    // outside click
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <nav
-      className="fixed w-[95%] mx-[2.5%] h-16 top-3 bg-light/90 shadow-xl rounded-lg
+    <header
+      className="fixed w-[95%] mx-[2.5%] h-16 top-3 bg-Light/90 dark:bg-Dark/80 shadow-xl dark:shadow-gray-500 dark:shadow rounded-lg
     flex items-center justify-between px-10 z-30 max-lg:px-4"
     >
-      <Link href={"/"} className="h-full flex items-center">
-        <Image src={DDDLogo} alt={"DDDLogo"} className="h-[150%] w-auto" />
+      <Link href={"/"} className="h-full flex items-center relative">
+        <Image
+          src={"/DDD.svg"}
+          alt={"DDDLogo"}
+          width={100}
+          height={100}
+          className="h-[150%] w-auto shadow-white"
+        />
+        {/* <div className="h-full w-full bg-Light absolute -z-10 opacity-80 rounded-full" /> */}
       </Link>
       {/* <DDDLogo className="w-16" /> */}
-      <div className="max-lg:hidden">
+      <nav className="max-md:hidden">
         <CustomLink href={"/"} title={"Home"} className="mr-4" />
         <CustomLink href={"/news"} title={"News"} className="mx-4" />
         <CustomLink href={"/works"} title={"Works"} className="mx-4" />
         <CustomLink href={"/contact"} title={"Contact"} className="ml-4" />
-      </div>
-    </nav>
+      </nav>
+
+      <button
+        ref={buttonRef}
+        className="flex-col justify-center items-center flex md:hidden"
+        onClick={handleClick}
+      >
+        <span
+          className={`bg-dark block transition-all duration-200 ease h-0.5 w-5 rounded-sm ${
+            isOpen ? "rotate-45 translate-y-1 " : "-translate-y-0.5"
+          }`}
+        ></span>
+        <span
+          className={`bg-dark block transition-all duration-200 ease h-0.5 w-5 rounded-sm my-0.5 ${
+            isOpen ? "opacity-0" : "opacity-100"
+          }`}
+        ></span>
+        <span
+          className={`bg-dark block transition-all duration-200 ease h-0.5 w-5 rounded-sm ${
+            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+          }`}
+        ></span>
+      </button>
+
+      {isOpen ? (
+        <MobileNavMenu setIsOpen={setIsOpen} isOpen={isOpen} node={node} />
+      ) : null}
+    </header>
   );
 };
 

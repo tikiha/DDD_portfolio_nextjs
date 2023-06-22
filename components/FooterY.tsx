@@ -4,8 +4,11 @@ import React from "react";
 
 const FooterY = () => {
   return (
-    <div className="mt-16 h-full w-full ">
-      <div className="py-6 flex items-center justify-center border border-collapse">
+    <div className="mt-16 h-full w-full max-md:mt-8">
+      <div
+        className="py-6 flex items-center justify-center border border-collapse
+      max-md:py-3"
+      >
         <button
           onClick={() => {
             window.scrollTo({

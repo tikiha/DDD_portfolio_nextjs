@@ -4,8 +4,10 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 import ContactConfirm from "./ContactConfirm";
 import ContactSuccess from "./ContactSuccess";
-import { ChevronUp, Home } from "lucide-react";
+import { Home } from "lucide-react";
 import FooterY from "@/components/FooterY";
+import PathRoot from "@/components/PathRoot";
+import Link from "next/link";
 
 const Page = () => {
   const [formData, setFormData] = useState(null);
@@ -14,7 +16,7 @@ const Page = () => {
   return (
     <main className="flex flex-col items-center w-screen h-full bg-light mt-16">
       <div className="flex-shrink-0 w-full h-[66vh] relative max-lg:h-[33vh]">
-        <h1 className="font-mont absolute left-1/2 top-1/2 text-light font-bold text-4xl z-10 -translate-x-1/2 -translate-y-1/2">
+        <h1 className="font-mont absolute left-1/2 top-1/2 text-Light font-bold text-4xl z-10 -translate-x-1/2 -translate-y-1/2">
           Contact
         </h1>
         <Image
@@ -25,15 +27,20 @@ const Page = () => {
           priority
         />
       </div>
-      <div className="flex-shrink-0 flex items-center py-6 text-dark mx-auto xl:w-[1280px] w-full px-4">
-        <Home size={16} />
+      <div
+        className="flex-shrink-0 flex items-center py-6 text-dark mx-auto xl:w-[1280px] w-full px-4 text-base 
+        max-md:py-3"
+      >
+        <Link href={"/"} className="">
+          <Home size={16} className="max-md:w-3" />
+        </Link>
         <span className="mx-2">{">"}</span>
-        <span className="font-mont text-primary underline">Contact</span>
+        <span className="font-mont underline text-primary">Contact</span>
       </div>
       <span className="border-t w-full mb-16" />
 
-      <div className="flex mx-auto lg:w-[1024px] w-full px-16 mb-5 h-fit text-lg max-lg:text-base max-lg:px-10">
-        <div className="w-1/3 flex flex-col items-center aspect-[3/1] ">
+      <div className="flex mx-auto lg:w-[1024px] w-full px-16 mb-5 h-fit max-lg:px-10 text-lg">
+        <div className="w-1/3 flex flex-col items-center aspect-[3/1]">
           <div
             className={`w-full  h-full rounded-tr-full rounded-xl flex items-center justify-center ${
               step === 1 ? "bg-slate-400/50 font-bold" : "bg-slate-200/50"

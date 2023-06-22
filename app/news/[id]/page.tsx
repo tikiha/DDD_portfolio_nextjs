@@ -2,7 +2,13 @@ import classes from "./styles.module.scss";
 import { microcms } from "@/lib/microcmsClient";
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, RefreshCcw, Home } from "lucide-react";
+import {
+  Calendar,
+  RefreshCcw,
+  Home,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 import React from "react";
 import NewsCarousel from "./NewsCarousel";
@@ -39,17 +45,24 @@ export default async function Page({ params }) {
   return (
     <main className="w-[calc(100vw-12px)] h-full bg-light">
       <div className="h-full px-4 mx-auto mt-16 w-full xl:w-[1280px]">
-        <div className="w-2/3 lg:w-[1024px] mx-auto pt-6 pb-4 flex items-center">
-          <Home size={16} />
-          <span className="font-mont">
-            &nbsp;{">"} News {">"}&nbsp;
-          </span>
+        <div className="w-2/3 lg:w-[1024px] mx-auto pt-6 pb-4 flex items-center text-base">
+          <Link href={"/"}>
+            <Home size={16} className="max-md:w-3" />
+          </Link>
+          <span className="mx-2">{">"}</span>
+          <Link className="font-mont" href={"/news"}>
+            News
+          </Link>
+          <span className="mx-2">{">"}</span>
           <span className="underline text-primary">{targetArticle.title}</span>
         </div>
         <span className="border w-[calc(100vw-12px)] absolute left-0" />
-        <div className="px-12 py-10 absolute left-1/2 top-36 -translate-x-1/2 z-10 bg-light">
+        <div
+          className="px-12 py-10 absolute left-1/2 top-36 -translate-x-1/2 z-10 bg-light 
+        max-md:px-6 max-md:py-5"
+        >
           <div className="text-sm flex items-center">
-            <Calendar size={16} className="stroke-dark" />
+            <Calendar size={16} className="stroke-dark max-md:w-3" />
             <span>&nbsp;{publishedAt}</span>
             {publishedAt === revisedAt ? null : (
               <>
@@ -58,7 +71,7 @@ export default async function Page({ params }) {
               </>
             )}
           </div>
-          <h1 className="text-3xl font-bold mt-2 text-center w-2/3 lg:w-[1024px]">
+          <h1 className="text-2xl font-bold mt-2 text-center lg:w-[1024px] max-md:w-[300px]">
             {targetArticle.title}
           </h1>
         </div>
@@ -71,7 +84,7 @@ export default async function Page({ params }) {
           />
         </div>
 
-        <div className="mt-16 w-2/3 lg:w-[1000px] flex flex-col mx-auto mb-20">
+        <div className="mt-16 w-full lg:w-[1000px] flex flex-col mx-auto mb-20">
           <div
             dangerouslySetInnerHTML={{ __html: `${targetArticle.content}` }}
             className={classes.html}
@@ -81,28 +94,28 @@ export default async function Page({ params }) {
             <li>share</li>
           </ul>
 
-          <div className="mt-16 flex w-full h-full">
+          <div className="mt-16 flex w-full h-full outline outline-1 outline-mute">
             {prevArticle ? (
-              <div className="w-1/2 outline outline-1 outline-mute flex items-center justify-center bg-white">
+              <div className="w-1/2 h-full border-r border-mute flex items-center justify-center">
                 <Link
                   href={`news/${prevArticle.id}`}
-                  className="w-full h-full p-10 hover:text-dark/60"
+                  className="w-full h-full p-10 hover:text-dark/60 text-base max-md:p-3 flex items-center"
                 >
-                  <span>{"<"}</span>
+                  <ChevronLeft size={16} className="max-md:w-3 mr-2" />
                   {prevArticle.title}
                 </Link>
               </div>
             ) : (
-              <div className="w-1/2" />
+              <div className="w-1/2 border-r border-mute" />
             )}
             {nextArticle ? (
-              <div className="w-1/2 outline outline-1 outline-mute flex items-center justify-center bg-white">
+              <div className="w-1/2 h-full my-auto flex items-center justify-center">
                 <Link
                   href={`news/${nextArticle.id}`}
-                  className="w-full h-full p-10 text-center hover:text-dark/60"
+                  className="w-full h-full p-10 text-center hover:text-dark/60 text-base max-md:p-3 flex items-center justify-end"
                 >
                   {nextArticle.title}
-                  <span>{">"}</span>
+                  <ChevronRight size={16} className="max-md:w-3 ml-2" />
                 </Link>
               </div>
             ) : null}

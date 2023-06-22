@@ -6,15 +6,18 @@ const CustomForm = ({ title, name, type }) => {
     <>
       <label
         htmlFor={name}
-        className="col-span-4 border border-collapse flex items-center px-2"
+        className="col-span-4 border border-collapse flex items-center px-2 max-md:col-span-12"
       >
         {title}
         <span className="text-red-500">*</span>
       </label>
-      <div className="col-span-8 border border-collapse flex items-center p-6">
+      <div
+        className="col-span-8 border border-collapse flex items-center p-6 text-Dark 
+      max-md:col-span-12 max-md:p-3"
+      >
         <input
           type={type}
-          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-base p-1 w-2/3"
+          className="rounded-md border border-collapse border-slate-500 bg-gray-50 p-1 w-full max-w-40"
           id={name}
           // placeholder="お名前"
           minLength={1}
@@ -45,8 +48,7 @@ function ContactForm({ setFormData, setStep }) {
   return (
     <form
       onSubmit={handleConfirm}
-      className="flex-shrink-0 mx-auto lg:w-[1024px] w-full px-4 grid grid-cols-12 border-collapse 
-      max-lg:text-sm max-md:text-xs"
+      className="flex-shrink-0 mx-auto lg:w-[1024px] w-full px-4 grid grid-cols-12 border-collapse text-base"
     >
       <CustomForm title={"会社名または屋号"} name={"company"} type={"text"} />
       <CustomForm title={"担当者様のお名前"} name={"name"} type={"text"} />
@@ -59,15 +61,19 @@ function ContactForm({ setFormData, setStep }) {
       />
       <label
         htmlFor="name"
-        className="col-span-4 border border-collapse flex items-center px-2"
+        className="col-span-4 border border-collapse flex items-center px-2 
+        max-md:col-span-12"
       >
         お問い合わせ項目<span className="text-red-500">*</span>
       </label>
-      <div className="col-span-8 border border-collapse flex items-center p-6">
+      <div
+        className="col-span-8 border border-collapse flex items-center p-6 
+      max-md:col-span-12 max-md:p-3"
+      >
         <select
           name="select"
           id=""
-          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-base p-1 w-2/3"
+          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-base p-1 w-full"
         >
           <option value="1:LPの制作">1:LPの制作</option>
           <option value="2:ホームページ制作">2:ホームページ制作</option>
@@ -82,13 +88,16 @@ function ContactForm({ setFormData, setStep }) {
       </div>
       <label
         htmlFor="name"
-        className="col-span-4 border border-collapse flex items-center px-2"
+        className="col-span-4 border border-collapse flex items-center px-2 max-md:col-span-12"
       >
         お問い合わせ内容<span className="text-red-500">*</span>
       </label>
-      <div className="col-span-8 border border-collapse flex items-center p-6">
+      <div
+        className="col-span-8 border border-collapse flex items-center p-6 
+      max-md:col-span-12 max-md:p-3"
+      >
         <textarea
-          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-base p-1 w-2/3"
+          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-base p-1 w-full"
           id="message"
           placeholder="ご要望をお書きください"
           rows={4}
@@ -99,8 +108,9 @@ function ContactForm({ setFormData, setStep }) {
       </div>
       <button
         type="submit"
-        className="px-4 py-2 bg-gray-700 text-light rounded-lg mt-10 col-start-6 
+        className="px-4 py-2 bg-gray-500 rounded-lg mt-10 col-start-6 col-span-2 
         disabled:bg-gray-400 disabled:text-gray-100 disabled:cursor-default
+        max-md:mt-5
         "
       >
         確認
