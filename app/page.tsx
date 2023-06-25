@@ -4,11 +4,12 @@ import officePic from "./../public/OfficePic/officePic.jpg";
 import HomeCarousel from "@/components/HomeCarousel";
 import Works from "@/components/Works";
 import Link from "next/link";
+import RowSlide from "@/components/RowSlide";
 import HomeSwiper from "@/components/HomeSwiper";
 
 const Page = () => {
   return (
-    <main className="flex w-full h-[calc(100vh-12px)] pt-16 max-lg:flex-col max-lg:h-full">
+    <RowSlide className="">
       <HomeCarousel />
 
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[33vh]">
@@ -76,7 +77,7 @@ const Page = () => {
       />
 
       <div
-        className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-blue-400 text-Light p-10
+        className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-primary text-Light p-10
       max-lg:w-full max-lg:h-[50vh]"
       >
         <h1 className="font-mont text-4xl font-bold mb-10">Works</h1>
@@ -142,10 +143,10 @@ const Page = () => {
       <Image
         src={officePic}
         alt={"office"}
-        className="fixed w-screen h-full -z-50"
+        className="fixed w-screen h-full -z-50 max-md:hidden"
         priority
       />
-    </main>
+    </RowSlide>
   );
 };
 

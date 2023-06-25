@@ -2,45 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+/* theme */
 :root {
-  --dark: #222;
   --light: #fcfcfc;
+  --dark: #222;
   --primary: #b63e91;
   --secondary: #45f;
-  --4xl: 36px;
-  --2xl: 24px;
-  --lg: 18px;
-  --base: 16px;
-  --sm: 14px;
+  --primary-dark: #58d6e9;
+  --secondary-dark: #896;
+
+  --foreground-color: var(--light);
+  --background-color: var(--dark);
+  --primary-color: var(--primary);
+  --secondary-color: var(--secondary);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --dark: #fcfcfc;
-    --light: #222;
-    --primary: #58d6e9;
-    --secondary: #896;
+    --foreground-color: var(--light);
+    --background-color: var(--dark);
+    --primary-color: var(--primary-dark);
+    --secondary-color: var(--secondary-dark);
   }
+}
+
+.light {
+  --foreground-color: var(--dark);
+  --background-color: var(--light);
+  --primary-color: var(--primary);
+  --secondary-color: var(--secondary);
+}
+
+.dark {
+  --foreground-color: var(--light);
+  --background-color: var(--dark);
+  --primary-color: var(--primary-dark);
+  --secondary-color: var(--secondary-dark);
+}
+
+/* font-size */
+
+/* default */
+:root {
+  --h1: 80px;
+  --h2: 60px;
+  --h3: 40px;
+  --p: 16px;
+  --s: 14px;
 }
 
 /* tablet */
 @media screen and (max-width: 1023px) {
   :root {
-    --4xl: 32px;
-    --2xl: 24px;
-    --lg: 16px;
-    --base: 14px;
-    --sm: 12px;
+    --h1: 80px;
+    --h2: 60px;
+    --h3: 40px;
+    --p: 16px;
+    --s: 14px;
   }
 }
 
 /* phone */
 @media screen and (max-width: 767px) {
   :root {
-    --4xl: 22px;
-    --2xl: 20px;
-    --lg: 16px;
-    --base: 14px;
-    --sm: 10px;
+    --h1: 48px;
+    --h2: 32px;
+    --h3: 24px;
+    --p: 14px;
+    --s: 12px;
   }
+}
+
+body {
+  font-size: var(--p);
+  color: var(--foreground-color);
+  background: var(--background-color);
 }

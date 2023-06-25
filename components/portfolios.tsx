@@ -4,32 +4,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Inspect } from "lucide-react";
+import ImacPic from "@/public/Pic/IMac.png";
 
 const IMacCustom = ({ src }) => {
   const [hover, setHover] = useState(false);
   return (
     <motion.div
-      className="h-full mx-auto relative"
-      whileHover={{ scale: 1.1, opacity: 1 }}
-      whileTap={{ scale: 0.9 }}
+      className="h-full mx-auto relative max-md:px-7 max-md:py-6 flex items-center"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
     >
       <Link href={"/"} className="cursor-pointer">
         <Image
-          src={src}
+          src={ImacPic}
           alt={"IMac"}
-          width={100}
-          height={100}
-          className="h-full w-auto"
+          className="h-auto w-full max-w-[280px]"
           priority
         />
         {hover && (
           <motion.div
-            initial={{ clipPath: "circle(0% at 50% 50%)" }}
-            animate={{ clipPath: "circle(150% at 50% 50%)" }}
+            initial={{ clipPath: "circle(0% at 20% 20%)" }}
+            animate={{ clipPath: "circle(150% at 20% 20%)" }}
             transition={{ duration: 0.7 }}
-            className="absolute bottom-5 -left-5 bg-primary px-4 py-2 text-light rounded-lg w-fit flex items-center"
+            className="absolute bottom-1/4 -translate-x-1/4 bg-primary px-4 py-2 rounded-lg w-fit flex items-center 
+            max-md:hidden max-lg:px-2 max-lg:py-1 max-lg:text-base"
           >
             三菱商事
             <Inspect size={16} className="ml-4" />
@@ -42,13 +42,37 @@ const IMacCustom = ({ src }) => {
 
 const Portfolios = () => {
   return (
-    <div className="flex-shrink-0 h-full w-screen p-32 bg-light grid grid-cols-3 gap-28">
+    <div
+      className="flex-shrink-0 h-full w-screen px-32 py-5 gap-x-20 gap-y-14 mx-auto bg-light grid grid-cols-3 text-Light
+      max-lg:px-12 max-lg:py-8 max-lg:gap-x-16 max-lg:gap-y-20
+    max-md:grid-cols-2 max-md:p-0 max-md:gap-0"
+    >
       <IMacCustom src={"/Pic/IMac.png"} />
       <IMacCustom src={"/Pic/IMac.png"} />
+      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
+      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
       <IMacCustom src={"/Pic/IMac.png"} />
       <IMacCustom src={"/Pic/IMac.png"} />
+
+      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
+      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
       <IMacCustom src={"/Pic/IMac.png"} />
       <IMacCustom src={"/Pic/IMac.png"} />
+
+      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
+      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
     </div>
   );
 };

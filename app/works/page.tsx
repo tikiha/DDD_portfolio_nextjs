@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Portfolios from "@/components/portfolios";
+import RowSlide from "@/components/RowSlide";
 
 const Page = () => {
   return (
-    <main className="flex w-full h-[calc(100vh-12px)] pt-16 max-lg:flex-col max-lg:h-full">
+    <RowSlide className="">
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[33vh]">
         <p className="text-base/loose">
           私たちの制作実績です。テーマのカスタマイズからオリジナルテーマの開発まで幅広く対応いたします。
@@ -37,7 +38,7 @@ const Page = () => {
         </p>
       </div>
       <Footer />
-    </main>
+    </RowSlide>
   );
 };
 

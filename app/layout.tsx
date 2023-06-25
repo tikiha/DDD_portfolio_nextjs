@@ -1,7 +1,7 @@
 import "../styles/globals.css";
-import "../styles/home.scss";
+import "../styles/ScrollBar.css";
 import NavBar from "@/components/NavBar";
-import RowSlide from "@/components/RowSlide";
+import NavFooter from "@/components/NavFooter";
 import { Noto_Sans_JP, Montserrat } from "next/font/google";
 
 const notojp = Noto_Sans_JP({
@@ -31,7 +31,8 @@ export default function RootLayout({
         className={`min-h-screen text-dark bg-light ${mont.variable} ${notojp.variable} font-notojp `}
       >
         <NavBar />
-        <RowSlide>{children}</RowSlide>
+        {children}
+        <NavFooter />
       </body>
     </html>
   );

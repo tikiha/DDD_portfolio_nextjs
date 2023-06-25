@@ -106,15 +106,16 @@ function ContactForm({ setFormData, setStep }) {
           required
         />
       </div>
-      <button
-        type="submit"
-        className="px-4 py-2 bg-gray-500 rounded-lg mt-10 col-start-6 col-span-2 
+      <div className="col-span-12 flex items-center justify-center mt-10 max-md:mt-5">
+        <button
+          type="submit"
+          className="px-4 py-2 bg-gray-500 rounded-lg text-Light 
         disabled:bg-gray-400 disabled:text-gray-100 disabled:cursor-default
-        max-md:mt-5
         "
-      >
-        確認
-      </button>
+        >
+          確認
+        </button>
+      </div>
     </form>
   );
 }

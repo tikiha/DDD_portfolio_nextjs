@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
-const RowSlide = ({ children }) => {
+const RowSlide = ({ children, className = "" }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -18,9 +18,12 @@ const RowSlide = ({ children }) => {
     };
   }, []);
   return (
-    <div ref={scrollRef} className="h-full w-full overflow-auto flex">
+    <main
+      ref={scrollRef}
+      className={`scroll-bar h-screen w-full flex pt-16 max-lg:flex-col max-lg:h-full ${className}`}
+    >
       {children}
-    </div>
+    </main>
   );
 };
 
