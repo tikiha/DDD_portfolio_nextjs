@@ -82,6 +82,7 @@ export default async function Page({ params }) {
               src={targetArticle.eyecatch.url}
               alt={"eyecatch"}
               fill
+              priority
               sizes="100vw"
               className=" object-cover object-center"
             />
