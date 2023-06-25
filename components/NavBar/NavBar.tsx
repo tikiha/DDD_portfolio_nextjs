@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import MobileNavMenu from "./MobileNavMenu";
 import HamburgerMenu from "./HamburgerButton";
-import { DDDLogo } from "./Icons";
-import ThemeSwitcher from "./ThemeSwitch/ThemeSwitcher";
+import { DDDLogo } from "../Icons";
+import ThemeSwitcher from "../ThemeSwitch/ThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const pathname = usePathname();

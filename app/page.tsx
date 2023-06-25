@@ -5,12 +5,12 @@ import HomeCarousel from "@/components/HomeCarousel";
 import Works from "@/components/Works";
 import Link from "next/link";
 import RowSlide from "@/components/RowSlide";
-import HomeSwiper from "@/components/HomeSwiper";
+import HomeSwiper from "@/components/SwiperLP/HomeSwiper";
 
 const Page = () => {
   return (
     <RowSlide className="">
-      <HomeCarousel />
+      <HomeSwiper />
 
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[33vh]">
         <p className="text-base/loose">
@@ -25,6 +25,7 @@ const Page = () => {
         <Image
           src="/Pic/About.png"
           fill
+          sizes="100vh"
           alt={"About Pic"}
           className="h-full object-cover object-left"
           priority
@@ -105,6 +106,7 @@ const Page = () => {
         <Image
           src="/Pic/Contact.png"
           fill
+          sizes="100vh"
           alt={"Contact Pic"}
           className="h-full object-cover object-center"
           priority
@@ -133,6 +135,7 @@ const Page = () => {
           <Image
             src="/Pic/Consul.png"
             fill
+            sizes="100vw"
             alt={"Consul Pic"}
             className="w-full object-cover object-center"
             priority

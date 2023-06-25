@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import "../styles/ScrollBar.css";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/NavBar/NavBar";
 import NavFooter from "@/components/NavFooter";
 import { Noto_Sans_JP, Montserrat } from "next/font/google";
 

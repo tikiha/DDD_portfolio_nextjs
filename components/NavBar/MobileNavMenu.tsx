@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
-import ThemeSwitcher from "./ThemeSwitch/ThemeSwitcher";
+import ThemeSwitcher from "../ThemeSwitch/ThemeSwitcher";
 
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   const pathname = usePathname();

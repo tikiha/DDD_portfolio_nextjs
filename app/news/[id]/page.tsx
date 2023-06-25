@@ -8,10 +8,11 @@ import {
   Home,
   ChevronLeft,
   ChevronRight,
+  Divide,
 } from "lucide-react";
 
 import React from "react";
-import NewsCarousel from "./NewsCarousel";
+import NewsCarousel from "./(components)/NewsCarousel";
 import FooterY from "@/components/FooterY";
 import FormatDate from "@/lib/formatDate";
 
@@ -59,7 +60,7 @@ export default async function Page({ params }) {
         <span className="border w-[calc(100vw-12px)] absolute left-0" />
         <div
           className="px-12 py-10 absolute left-1/2 top-36 -translate-x-1/2 z-10 bg-light 
-        max-md:px-6 max-md:py-5"
+        max-md:px-6 max-md:py-5  border border-mute rounded-lg"
         >
           <div className="text-sm flex items-center">
             <Calendar size={16} className="stroke-dark max-md:w-3" />
@@ -75,14 +76,19 @@ export default async function Page({ params }) {
             {targetArticle.title}
           </h1>
         </div>
-        <div className="w-full overflow-hidden mt-24 aspect-[16/9] relative ">
-          <Image
-            src={targetArticle.eyecatch?.url}
-            alt={"eyecatch"}
-            fill
-            className="object-cover object-center"
-          />
-        </div>
+        {targetArticle.eyecatch ? (
+          <div className="w-full overflow-hidden mt-24 aspect-[16/9] relative ">
+            <Image
+              src={targetArticle.eyecatch.url}
+              alt={"eyecatch"}
+              fill
+              sizes="100vw"
+              className=" object-cover object-center"
+            />
+          </div>
+        ) : (
+          <div className="mt-56 bg-white w-full " />
+        )}
 
         <div className="mt-16 w-full lg:w-[1000px] flex flex-col mx-auto mb-20">
           <div
@@ -94,7 +100,7 @@ export default async function Page({ params }) {
             <li>share</li>
           </ul>
 
-          <div className="mt-16 flex w-full h-full outline outline-1 outline-mute">
+          <div className="mt-16 flex w-full h-full rounded-lg outline outline-1 outline-mute">
             {prevArticle ? (
               <div className="w-1/2 h-full border-r border-mute flex items-center justify-center">
                 <Link

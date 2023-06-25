@@ -12,12 +12,14 @@ import FormatDate from "@/lib/formatDate";
 
 const NewsCarousel = ({ articles }) => {
   let Articles;
-  if (articles.contents.length < 6) {
+  if (articles.contents.length < 4) {
     Articles = [
       ...articles.contents,
       ...articles.contents,
       ...articles.contents,
     ];
+  } else if (articles.contents.length < 8) {
+    Articles = [...articles.contents, ...articles.contents];
   } else {
     Articles = [...articles.contents];
   }
@@ -41,15 +43,15 @@ const NewsCarousel = ({ articles }) => {
         centeredSlides={true}
         mousewheel={true}
         autoplay={{
-          delay: 3000,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         loop={true}
         modules={[Mousewheel, Autoplay]}
       >
-        {Articles.map((article) => {
+        {Articles.map((article, index) => {
           return (
-            <SwiperSlide key={`image ${article.id}`} className="mb-10">
+            <SwiperSlide key={`image ${article.id} ${index}`} className="mb-10">
               <div className="w-full flex items-center text-sm text-mute">
                 <Calendar size={14} className="stroke-mute" />
                 <span>&nbsp;{FormatDate(article.publishedAt)}</span>
@@ -64,10 +66,11 @@ const NewsCarousel = ({ articles }) => {
                       src={article.eyecatch.url}
                       alt={"eyecatch"}
                       fill
+                      sizes="100vw"
                       className="hover:scale-110 duration-150 object-cover object-center"
                     />
                   ) : (
-                    <div className="w-full h-full bg-slate-300 flex items-center justify-center text-sm">
+                    <div className="w-full h-full bg-slate-300 flex items-center justify-center">
                       No Image
                     </div>
                   )}
