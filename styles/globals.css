@@ -44,32 +44,23 @@
 
 /* default */
 :root {
-  --h1: 80px;
-  --h2: 60px;
-  --h3: 40px;
-  --p: 16px;
-  --s: 14px;
+  --4xl: 2.25rem;
+  --2xl: 1.5rem;
+  --base: 1rem;
 }
 
 /* tablet */
 @media screen and (max-width: 1023px) {
   :root {
-    --h1: 80px;
-    --h2: 60px;
-    --h3: 40px;
-    --p: 16px;
-    --s: 14px;
   }
 }
 
 /* phone */
 @media screen and (max-width: 767px) {
   :root {
-    --h1: 48px;
-    --h2: 32px;
-    --h3: 24px;
-    --p: 14px;
-    --s: 12px;
+    --4xl: 1.5rem;
+    --2xl: 1.25rem;
+    --base: 0.8rem;
   }
 }
 

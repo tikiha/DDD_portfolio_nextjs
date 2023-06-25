@@ -23,11 +23,9 @@ module.exports = {
       },
 
       fontSize: {
-        h1: "var(--h1)",
-        h2: "var(--h2)",
-        h3: "var(--h3)",
-        p: "var(--p)",
-        s: "var(--s)",
+        "4xl": "var(--4xl)",
+        "2xl": "var(--2xl)",
+        base: "var(--base)",
       },
       colors: {
         dark: "var(--foreground-color)",
