@@ -56,6 +56,7 @@ function HomeSwiper() {
           depth: 200,
         }}
         loop
+        allowTouchMove={false}
         centeredSlides={true}
         modules={[Pagination, Navigation, Autoplay, EffectCoverflow]}
       >
@@ -66,7 +67,7 @@ function HomeSwiper() {
           >
             {showText && activeSlide === index ? (
               <motion.div
-                className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 p-4 cursor-pointer"
+                className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 p-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 100, transition: { duration: 1.5 } }}
               >

@@ -142,7 +142,7 @@ const Page = () => {
           />
         </div>
       </div>
-      <Footer />
+      <Footer className="bg-light" />
       <Image
         src={officePic}
         alt={"office"}

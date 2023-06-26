@@ -59,10 +59,10 @@ export default async function Page({ params }) {
         </div>
         <span className="border w-[calc(100vw-12px)] absolute left-0" />
         <div
-          className="px-12 py-10 absolute left-1/2 top-36 -translate-x-1/2 z-10 bg-light 
+          className="px-12 py-10 lg:absolute lg:left-1/2 mt-8 top-36 lg:-translate-x-1/2 z-10 bg-light lg:w-3/4 w-full
         max-md:px-6 max-md:py-5  border border-mute rounded-lg"
         >
-          <div className="text-sm flex items-center">
+          <div className="absolute -translate-y-1/2 text-sm flex items-center">
             <Calendar size={16} className="stroke-dark max-md:w-3" />
             <span>&nbsp;{publishedAt}</span>
             {publishedAt === revisedAt ? null : (
@@ -72,12 +72,12 @@ export default async function Page({ params }) {
               </>
             )}
           </div>
-          <h1 className="text-2xl font-bold mt-2 text-center lg:w-[1024px] max-md:w-[300px]">
+          <h1 className="text-2xl font-bold mt-2 text-center">
             {targetArticle.title}
           </h1>
         </div>
         {targetArticle.eyecatch ? (
-          <div className="w-full overflow-hidden mt-24 aspect-[16/9] relative ">
+          <div className="w-full overflow-hidden mt-8 lg:mt-24 aspect-[16/9] relative ">
             <Image
               src={targetArticle.eyecatch.url}
               alt={"eyecatch"}
@@ -91,7 +91,7 @@ export default async function Page({ params }) {
           <div className="mt-56 bg-white w-full " />
         )}
 
-        <div className="mt-16 w-full lg:w-[1000px] flex flex-col mx-auto mb-20">
+        <div className="mt-16 w-full lg:w-[900px] flex flex-col mx-auto mb-20">
           <div
             dangerouslySetInnerHTML={{ __html: `${targetArticle.content}` }}
             className={classes.html}

@@ -26,6 +26,7 @@ module.exports = {
         "4xl": "var(--4xl)",
         "2xl": "var(--2xl)",
         base: "var(--base)",
+        sm: "var(--sm)",
       },
       colors: {
         dark: "var(--foreground-color)",

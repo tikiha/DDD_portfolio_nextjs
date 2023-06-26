@@ -6,7 +6,7 @@
 :root {
   --light: #fcfcfc;
   --dark: #222;
-  --primary: #b63e91;
+  --primary: #e0a408;
   --secondary: #45f;
   --primary-dark: #58d6e9;
   --secondary-dark: #896;
@@ -47,6 +47,7 @@
   --4xl: 2.25rem;
   --2xl: 1.5rem;
   --base: 1rem;
+  --sm: 0.875rem;
 }
 
 /* tablet */
@@ -61,6 +62,7 @@
     --4xl: 1.5rem;
     --2xl: 1.25rem;
     --base: 0.8rem;
+    --sm: 0.7rem;
   }
 }
 
