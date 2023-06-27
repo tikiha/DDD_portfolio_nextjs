@@ -135,12 +135,12 @@ function HomeCarousel() {
             transition={{ delay: 2, duration: 2 }}
             className={` z-20 w-full px-8`}
           >
-            <h1 className="text-4xl/relaxed font-bold text-center mb-4">
+            <h1 className="text-h1/relaxed font-bold text-center mb-4">
               グッとくる
               <br />
               HPお任せください。
             </h1>
-            <p className="text-base/loose">
+            <p className="text-body/loose">
               元ラガーマンのWebデザイナー二人組です。あなたの要望に全力で”トライ”します。
               組織名にある「Driven」はラグビー由来の熱意のある献身的な姿勢のこと。
               HP制作など、サービス詳細は以下のボタンからご覧ください。

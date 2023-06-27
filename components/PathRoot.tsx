@@ -14,7 +14,7 @@ const PathRoot = () => {
   console.log(pathParts);
   return (
     <div
-      className="flex-shrink-0 flex items-center py-6 text-dark mx-auto xl:w-[1280px] w-full px-4 text-base
+      className="flex-shrink-0 flex items-center py-6 text-dark mx-auto xl:w-[1280px] w-full px-4 text-body
 max-md:py-3"
     >
       <Link href={"/"} className="">

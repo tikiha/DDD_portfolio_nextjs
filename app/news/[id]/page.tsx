@@ -46,7 +46,7 @@ export default async function Page({ params }) {
   return (
     <main className="w-[calc(100vw-12px)] h-full bg-light">
       <div className="h-full px-4 mx-auto mt-16 w-full xl:w-[1280px]">
-        <div className="w-2/3 lg:w-[1024px] mx-auto pt-6 pb-4 flex items-center text-base">
+        <div className="w-2/3 lg:w-[1024px] mx-auto pt-6 pb-4 flex items-center text-body">
           <Link href={"/"}>
             <Home size={16} className="max-md:w-3" />
           </Link>
@@ -72,7 +72,7 @@ export default async function Page({ params }) {
               </>
             )}
           </div>
-          <h1 className="text-2xl font-bold mt-2 text-center">
+          <h1 className="text-h3 font-bold mt-2 text-center">
             {targetArticle.title}
           </h1>
         </div>
@@ -106,7 +106,7 @@ export default async function Page({ params }) {
               <div className="w-1/2 h-full border-r border-mute flex items-center justify-center">
                 <Link
                   href={`news/${prevArticle.id}`}
-                  className="w-full h-full p-10 hover:text-dark/60 text-base max-md:p-3 flex items-center"
+                  className="w-full h-full p-10 hover:text-dark/60 text-body max-md:p-3 flex items-center"
                 >
                   <ChevronLeft size={16} className="max-md:w-3 mr-2" />
                   {prevArticle.title}
@@ -119,7 +119,7 @@ export default async function Page({ params }) {
               <div className="w-1/2 h-full my-auto flex items-center justify-center">
                 <Link
                   href={`news/${nextArticle.id}`}
-                  className="w-full h-full p-10 text-center hover:text-dark/60 text-base max-md:p-3 flex items-center justify-end"
+                  className="w-full h-full p-10 text-center hover:text-dark/60 text-body max-md:p-3 flex items-center justify-end"
                 >
                   {nextArticle.title}
                   <ChevronRight size={16} className="max-md:w-3 ml-2" />

@@ -48,7 +48,7 @@ function ContactForm({ setFormData, setStep }) {
   return (
     <form
       onSubmit={handleConfirm}
-      className="flex-shrink-0 mx-auto lg:w-[1024px] w-full px-4 grid grid-cols-12 border-collapse text-base"
+      className="flex-shrink-0 mx-auto lg:w-[1024px] w-full px-4 grid grid-cols-12 border-collapse text-body"
     >
       <CustomForm title={"会社名または屋号"} name={"company"} type={"text"} />
       <CustomForm title={"担当者様のお名前"} name={"name"} type={"text"} />
@@ -73,7 +73,7 @@ function ContactForm({ setFormData, setStep }) {
         <select
           name="select"
           id=""
-          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-base p-1 w-full"
+          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-body p-1 w-full"
         >
           <option value="1:LPの制作">1:LPの制作</option>
           <option value="2:ホームページ制作">2:ホームページ制作</option>
@@ -97,7 +97,7 @@ function ContactForm({ setFormData, setStep }) {
       max-md:col-span-12 max-md:p-3"
       >
         <textarea
-          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-base p-1 w-full"
+          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-body p-1 w-full"
           id="message"
           placeholder="ご要望をお書きください"
           rows={4}

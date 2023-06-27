@@ -25,7 +25,7 @@ const NewsCarousel = ({ articles }) => {
   }
   return (
     <div className="h-full w-full bg-light py-20">
-      <h1 className="font-mont font-bold text-2xl flex items-center justify-center mb-10">
+      <h1 className="font-mont font-bold text-h3 flex items-center justify-center mb-10">
         Latest news
       </h1>
       <Swiper
@@ -77,7 +77,7 @@ const NewsCarousel = ({ articles }) => {
                 </Link>
                 <Link
                   href={`news/${article.id}`}
-                  className="text-lg hover:text-primary duration-300 max-lg:text-base"
+                  className="text-h5 hover:text-primary duration-300 max-lg:text-body"
                 >
                   {article.title}
                 </Link>

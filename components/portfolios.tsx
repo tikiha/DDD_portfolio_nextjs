@@ -29,7 +29,7 @@ const IMacCustom = ({ src }) => {
             animate={{ clipPath: "circle(150% at 20% 20%)" }}
             transition={{ duration: 0.7 }}
             className="absolute bottom-1/4 -translate-x-1/4 bg-primary px-4 py-2 rounded-lg w-fit flex items-center 
-            max-md:hidden max-lg:px-2 max-lg:py-1 max-lg:text-base"
+            max-md:hidden max-lg:px-2 max-lg:py-1 max-lg:text-body"
           >
             三菱商事
             <Inspect size={16} className="ml-4" />
@@ -49,28 +49,28 @@ const Portfolios = () => {
     >
       <IMacCustom src={"/Pic/IMac.png"} />
       <IMacCustom src={"/Pic/IMac.png"} />
-      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+      <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
         三菱商事
       </span>
-      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
-        三菱商事
-      </span>
-      <IMacCustom src={"/Pic/IMac.png"} />
-      <IMacCustom src={"/Pic/IMac.png"} />
-
-      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
-        三菱商事
-      </span>
-      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+      <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
         三菱商事
       </span>
       <IMacCustom src={"/Pic/IMac.png"} />
       <IMacCustom src={"/Pic/IMac.png"} />
 
-      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+      <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
         三菱商事
       </span>
-      <span className="w-full bg-primary h-fit px-8 text-base md:hidden font-semibold py-2 text-center">
+      <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
+      <IMacCustom src={"/Pic/IMac.png"} />
+      <IMacCustom src={"/Pic/IMac.png"} />
+
+      <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
+        三菱商事
+      </span>
+      <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
         三菱商事
       </span>
     </div>

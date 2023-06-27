@@ -8,12 +8,12 @@ const Page = () => {
   return (
     <RowSlide className="">
       <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[33vh]">
-        <p className="text-base/loose">
+        <p className="text-body/loose">
           私たちの制作実績です。テーマのカスタマイズからオリジナルテーマの開発まで幅広く対応いたします。
         </p>
       </div>
       <div className="flex-shrink-0 h-full w-2/3 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-4xl text-Light font-bold ">Works</h1>
+        <h1 className="font-mont z-10 text-h1 text-Light font-bold ">Works</h1>
         <Image
           src="/Pic/Works.png"
           fill
@@ -28,12 +28,13 @@ const Page = () => {
           src="/Pic/Happy.png"
           fill
           alt={"Happy Pic"}
+          sizes="100vh"
           className="h-full object-cover object-center"
           priority
         />
       </div>
       <div className="flex-shrink-0 h-full w-1/3 bg-light flex items-center justify-center px-10 max-lg:w-full max-lg:h-[33vh]">
-        <p className="text-base/loose">
+        <p className="text-body/loose">
           ご予算に合わせた提案、カスタマイズを行います。些細なご質問でも構いません。お気軽にご相談ください。
         </p>
       </div>

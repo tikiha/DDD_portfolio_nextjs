@@ -37,7 +37,7 @@ const MobileNavMenu = ({ isOpen, setIsOpen, node }) => {
       animate={{ scale: 1, opacity: 1 }}
       className="min-w-[70vw] z-20 bg-Light/70 dark:bg-Dark/90 text-Dark dark:text-Light backdrop-blur-md py-32 rounded-lg flex flex-col justify-between items-center fixed top-1/2 left-1/2 max-lg:py-16"
     >
-      <nav className="flex text-2xl items-center flex-col justify-center space-y-5">
+      <nav className="flex text-h3 items-center flex-col justify-center space-y-5">
         <CustomMobileLink
           href="/"
           title="Home"

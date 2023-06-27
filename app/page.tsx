@@ -19,7 +19,7 @@ const Page = () => {
         </p>
       </div>
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-4xl text-Light font-bold ">
+        <h1 className="font-mont z-10 text-h1 text-Light font-bold ">
           About US
         </h1>
         <Image
@@ -81,7 +81,7 @@ const Page = () => {
         className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-primary text-Light p-10
       max-lg:w-full max-lg:h-[50vh]"
       >
-        <h1 className="font-mont text-4xl font-bold mb-10">Works</h1>
+        <h1 className="font-mont text-h1 font-bold mb-10">Works</h1>
         <p className="text-base/loose">
           Webサイトに訪れたユーザー目線で、ユーザビリティの高いサイト制作を行います。ブログ投稿機能、プラグインを用いてご希望に応じたカスタマイズをいたします。
         </p>
@@ -100,9 +100,7 @@ const Page = () => {
       </div>
 
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-4xl text-Light font-bold">
-          Contact
-        </h1>
+        <h1 className="font-mont z-10 text-h1 text-Light font-bold">Contact</h1>
         <Image
           src="/Pic/Contact.png"
           fill
@@ -131,11 +129,11 @@ const Page = () => {
             </Link>
           </div>
         </div>
-        <div className="h-1/2 w-full relative max-lg:h-[33vh]">
+        <div className="h-1/2 w-full relative max-lg:h-[33vh] xs:h-4">
           <Image
             src="/Pic/Consul.png"
             fill
-            sizes="100vw"
+            sizes="100%"
             alt={"Consul Pic"}
             className="w-full object-cover object-center"
             priority

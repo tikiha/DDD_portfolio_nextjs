@@ -44,10 +44,14 @@
 
 /* default */
 :root {
-  --4xl: 2.25rem;
-  --2xl: 1.5rem;
-  --base: 1rem;
-  --sm: 0.875rem;
+  --large: 50px;
+  --h1: 42px;
+  --h2: 32px;
+  --h3: 26px;
+  --h4: 22px;
+  --h5: 20px;
+  --h6: 18px;
+  --body: 16px;
 }
 
 /* tablet */
@@ -59,15 +63,19 @@
 /* phone */
 @media screen and (max-width: 767px) {
   :root {
-    --4xl: 1.5rem;
-    --2xl: 1.25rem;
-    --base: 0.8rem;
-    --sm: 0.7rem;
+    --large: 32px;
+    --h1: 26px;
+    --h2: 24px;
+    --h3: 22px;
+    --h4: 20px;
+    --h5: 18px;
+    --h6: 16px;
+    --body: 14px;
   }
 }
 
 body {
-  font-size: var(--p);
+  font-size: var(--body);
   color: var(--foreground-color);
   background: var(--background-color);
 }
