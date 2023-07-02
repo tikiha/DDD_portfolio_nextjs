@@ -89,8 +89,8 @@ function HomeSwiper() {
               src={image}
               alt={"image"}
               fill
-              // priority
-              sizes="100vw"
+              priority
+              sizes="100vh"
               className="object-cover object-center brightness-[0.6]"
             ></Image>
           </SwiperSlide>
