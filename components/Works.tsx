@@ -9,7 +9,7 @@ const Works = ({ title, src, paragraph, button, ps, classNmae = "" }) => {
         alt={`${title} Pic`}
         fill
         sizes="100vh"
-        priority
+        // priority
         className="-z-20 h-full object-cover"
       />
       <div className="bg-Dark/40 h-full absolute w-full -z-10" />
