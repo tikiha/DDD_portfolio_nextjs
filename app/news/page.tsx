@@ -17,15 +17,14 @@ async function Page() {
       <div className="w-full h-16 bg-light fixed -translate-y-[100%] z-10" />
       <div
         className="flex-shrink-0 flex items-center justify-center border-slate-400
-      border-b"
+      w-full h-[33vh] border-b"
       >
         <h1 className="font-mont font-bold text-h1 ">NEWS</h1>
       </div>
       {articles.contents.map((article) => (
         <div
           key={article.id}
-          className="flex-shrink-0 border-slate-400 flex flex-col items-center justify-between 
-          border-b"
+          className="flex-shrink-0 border-slate-400 flex flex-col items-center justify-between"
         >
           <div className="w-full flex items-center text-body">
             <Calendar size={16} className="stroke-Light w-3" />
