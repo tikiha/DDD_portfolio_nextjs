@@ -16,7 +16,7 @@ async function Page() {
       <div className="bg-gradient-original w-full h-full fixed -z-10" />
       <div className="w-full h-16 bg-light fixed -translate-y-[100%] z-10" />
       <div
-        className="flex-shrink-0 flex items-center justify-center lg:border-r border-slate-400
+        className="flex-shrink-0 flex items-center justify-center border-slate-400
       border-b"
       >
         <h1 className="font-mont font-bold text-h1 ">NEWS</h1>
@@ -24,7 +24,7 @@ async function Page() {
       {articles.contents.map((article) => (
         <div
           key={article.id}
-          className="flex-shrink-0 lg:border-r border-slate-400 lg:px-6 lg:py-10 flex flex-col items-center justify-between 
+          className="flex-shrink-0 border-slate-400 flex flex-col items-center justify-between 
           border-b"
         >
           <div className="w-full flex items-center text-body">
