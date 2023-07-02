@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import classes from "./styles.module.scss";
 import { microcms } from "@/lib/microcmsClient";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import {
   Calendar,
@@ -8,7 +9,6 @@ import {
   Home,
   ChevronLeft,
   ChevronRight,
-  Divide,
 } from "lucide-react";
 
 import React from "react";
@@ -78,11 +78,12 @@ export default async function Page({ params }) {
         </div>
         {targetArticle.eyecatch ? (
           <div className="w-full overflow-hidden mt-8 lg:mt-24 aspect-[16/9] relative ">
-            <Image
-              src={targetArticle.eyecatch.url}
+            <img
+              srcSet={targetArticle.eyecatch.url}
               alt={"eyecatch"}
-              fill
-              priority
+              fetchPriority="high"
+              decoding="async"
+              data-nimg="fill"
               sizes="100vw"
               className=" object-cover object-center"
             />

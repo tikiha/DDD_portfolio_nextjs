@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { microcms } from "../../lib/microcmsClient";
 import Link from "next/link";
@@ -42,11 +43,13 @@ async function Page() {
               className="w-full overflow-hidden aspect-[16/9] relative mb-2 mt-1"
             >
               {article.eyecatch ? (
-                <Image
-                  src={article.eyecatch.url}
+                <img
+                  srcSet={article.eyecatch.url}
                   alt={"eyecatch"}
-                  fill
-                  sizes="100vh"
+                  fetchPriority="high"
+                  decoding="async"
+                  data-nimg="fill"
+                  sizes="100vw"
                   className="hover:scale-110 duration-150 object-cover object-center"
                 />
               ) : (

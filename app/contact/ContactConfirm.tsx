@@ -20,7 +20,7 @@ const ContactConfirm = ({ formData, setStep }) => {
   async function handleSubmit(event) {
     event.preventDefault();
     setLoading(true);
-    const response = await fetch("/api/contact", {
+    const response = await fetch("api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain",

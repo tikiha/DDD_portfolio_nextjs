@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -62,10 +63,12 @@ const NewsCarousel = ({ articles }) => {
                   className="w-full overflow-hidden aspect-[16/9] relative my-4"
                 >
                   {article.eyecatch ? (
-                    <Image
-                      src={article.eyecatch.url}
+                    <img
+                      srcSet={article.eyecatch.url}
                       alt={"eyecatch"}
-                      fill
+                      fetchPriority="high"
+                      decoding="async"
+                      data-nimg="fill"
                       sizes="100vw"
                       className="hover:scale-110 duration-150 object-cover object-center"
                     />

@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
 
-module.exports = {
-  images: {
-    domains: ["images.microcms-assets.io"],
-  },
-};
+const withExportImages = require("next-export-optimize-images");
+
+const nextConfig = withExportImages({
+  output: "export",
+  // images: {
+  //   domains: ["images.microcms-assets.io"],
+  // },
+});
+
+module.exports = nextConfig;

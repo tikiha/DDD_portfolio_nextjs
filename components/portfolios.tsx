@@ -43,7 +43,7 @@ const IMacCustom = ({ src }) => {
 const Portfolios = () => {
   return (
     <div
-      className="flex-shrink-0 h-full w-screen px-32 py-5 gap-x-20 gap-y-14 mx-auto bg-light grid grid-cols-3 text-Light
+      className="flex-shrink-0 h-full w-full px-32 py-10 gap-x-20 gap-y-14 mx-auto bg-light grid grid-cols-3 text-Light
       max-lg:px-12 max-lg:py-8 max-lg:gap-x-16 max-lg:gap-y-20
     max-md:grid-cols-2 max-md:p-0 max-md:gap-0"
     >
