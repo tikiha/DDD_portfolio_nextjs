@@ -46,7 +46,7 @@ const RowSlide = ({ children, className = "" }) => {
       // onMouseLeave={stopDrag}
       // onMouseUp={stopDrag}
       // onMouseMove={doDrag}
-      className={`scroll-bar h-screen w-full flex pt-16 max-lg:flex-col max-lg:h-full ${className}`}
+      className={`scroll-bar w-full flex pt-16 max-lg:flex-col max-lg:h-full ${className}`}
     >
       {children}
     </main>
