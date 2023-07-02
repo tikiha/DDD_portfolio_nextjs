@@ -25,7 +25,7 @@ const Page = () => {
         <Image
           src="/Pic/About.png"
           fill
-          sizes="100vh"
+          sizes="100vw"
           alt={"About Pic"}
           className="h-full object-cover object-left"
           // priority
@@ -104,7 +104,7 @@ const Page = () => {
         <Image
           src="/Pic/Contact.png"
           fill
-          sizes="100vh"
+          sizes="100vw"
           alt={"Contact Pic"}
           className="h-full object-cover object-center"
           // priority

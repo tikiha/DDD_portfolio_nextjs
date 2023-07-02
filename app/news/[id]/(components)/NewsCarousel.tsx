@@ -66,7 +66,6 @@ const NewsCarousel = ({ articles }) => {
                     <img
                       srcSet={article.eyecatch.url}
                       alt={"eyecatch"}
-                      fetchPriority="high"
                       decoding="async"
                       data-nimg="fill"
                       sizes="100vw"
