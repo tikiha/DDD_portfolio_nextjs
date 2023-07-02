@@ -145,7 +145,7 @@ const Page = () => {
         src={officePic}
         alt={"office"}
         className="fixed w-screen h-full -z-50 max-md:hidden"
-        // priority
+        priority
       />
     </RowSlide>
   );
