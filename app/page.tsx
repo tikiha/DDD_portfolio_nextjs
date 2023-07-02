@@ -28,7 +28,7 @@ const Page = () => {
           sizes="100vh"
           alt={"About Pic"}
           className="h-full object-cover object-left"
-          priority
+          // priority
         />
       </div>
       <div className="flex-shrink-0 h-full w-1/2 flex flex-col items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[50vh]">
@@ -107,7 +107,7 @@ const Page = () => {
           sizes="100vh"
           alt={"Contact Pic"}
           className="h-full object-cover object-center"
-          priority
+          // priority
         />
       </div>
 
@@ -136,7 +136,7 @@ const Page = () => {
             sizes="100%"
             alt={"Consul Pic"}
             className="w-full object-cover object-center"
-            priority
+            // priority
           />
         </div>
       </div>
@@ -145,7 +145,7 @@ const Page = () => {
         src={officePic}
         alt={"office"}
         className="fixed w-screen h-full -z-50 max-md:hidden"
-        priority
+        // priority
       />
     </RowSlide>
   );
