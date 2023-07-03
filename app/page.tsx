@@ -128,7 +128,7 @@ const Page = () => {
             </Link>
           </div>
         </div>
-        <div className="h-1/2 w-full relative max-lg:h-[33vh] xs:h-4">
+        <div className="h-1/2 w-full relative max-lg:h-[33lvh] xs:h-4">
           <Image
             src="/Pic/Consul.png"
             fill

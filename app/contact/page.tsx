@@ -15,7 +15,7 @@ const Page = () => {
 
   return (
     <main className="flex flex-col items-center w-full h-full bg-light mt-16">
-      <div className="flex-shrink-0 w-full h-[66vh] relative max-lg:h-[33vh]">
+      <div className="flex-shrink-0 w-full h-[66vh] relative max-lg:h-[33lvh]">
         <h1 className="font-mont absolute left-1/2 top-1/2 text-Light font-bold text-h2 z-10 -translate-x-1/2 -translate-y-1/2">
           Contact
         </h1>
