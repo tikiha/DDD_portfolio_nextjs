@@ -31,7 +31,7 @@ function HomeSwiper() {
     return () => clearTimeout(timeoutId);
   }, [activeSlide]);
   return (
-    <div className="w-2/3 h-full text-Light flex-shrink-0 max-lg:w-full max-lg:h-[80vh] relative">
+    <div className="w-2/3 h-full text-Light flex-shrink-0 max-lg:w-full max-lg:h-[80lvh] relative">
       <Swiper
         className="w-full h-full bg-light"
         onSlideChange={(swiper) => {

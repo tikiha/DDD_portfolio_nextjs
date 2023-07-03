@@ -17,7 +17,7 @@ async function Page() {
       <div className="w-full h-16 bg-light fixed -translate-y-[100%] z-10" />
       <div
         className="flex-shrink-0 w-1/3 h-full flex items-center justify-center border-r border-slate-400
-      max-lg:w-full max-lg:h-[50vh] max-lg:border-b"
+      max-lg:w-full max-lg:h-[50lvh] max-lg:border-b"
       >
         <h1 className="font-mont font-bold text-h2 ">NEWS</h1>
       </div>

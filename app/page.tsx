@@ -17,7 +17,7 @@ const Page = () => {
           洗練されたHPやLPを作る2人組。お客様のイメージをしっかりとお聞きし、期待を超えるデザインをお届けします。
         </p>
       </div>
-      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[50vh]">
+      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[50lvh]">
         <h1 className="font-mont z-10 text-h3 text-Light font-bold max-lg:text-4xl max-md:text-3xl">
           About US
         </h1>

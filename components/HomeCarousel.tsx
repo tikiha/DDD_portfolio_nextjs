@@ -107,7 +107,7 @@ function HomeCarousel() {
   };
 
   return (
-    <div className="w-2/3 h-full text-Light flex-shrink-0 relative max-lg:w-full max-lg:h-[70vh]">
+    <div className="w-2/3 h-full text-Light flex-shrink-0 relative max-lg:w-full max-lg:h-[70lvh]">
       <div className="w-full h-full absolute bg-Dark/30 z-10 " />
       <div className="flex items-center h-full">
         <SlideArrow

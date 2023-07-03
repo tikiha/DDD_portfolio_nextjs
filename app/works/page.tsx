@@ -12,7 +12,7 @@ const Page = () => {
           私たちの制作実績です。テーマのカスタマイズからオリジナルテーマの開発まで幅広く対応いたします。
         </p>
       </div>
-      <div className="flex-shrink-0 h-full w-2/3 flex items-center justify-center relative max-lg:w-full max-lg:h-[50vh]">
+      <div className="flex-shrink-0 h-full w-2/3 flex items-center justify-center relative max-lg:w-full max-lg:h-[50lvh]">
         <h1 className="font-mont z-10 text-h2 text-Light font-bold ">Works</h1>
         <Image
           src="/Pic/Works.png"
@@ -23,7 +23,7 @@ const Page = () => {
         />
       </div>
       <Portfolios />
-      <div className="flex-shrink-0 h-full w-1/3 relative max-lg:w-full max-lg:h-[50vh]">
+      <div className="flex-shrink-0 h-full w-1/3 relative max-lg:w-full max-lg:h-[50lvh]">
         <Image
           src="/Pic/Happy.png"
           fill
