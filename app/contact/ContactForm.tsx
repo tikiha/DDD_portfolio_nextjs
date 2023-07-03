@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const CustomForm = ({ title, name, type, className = "" }) => {
+const CustomForm = ({ title, name, type, className = "", labelcn = "" }) => {
   return (
     <>
       <label
@@ -13,7 +13,7 @@ const CustomForm = ({ title, name, type, className = "" }) => {
       </label>
       <div
         className={`col-span-8 border-x border-b border-collapse flex items-center p-6 text-Dark 
-        max-md:col-span-12 max-md:px-3 max-md:py-2 md:${className}`}
+        max-md:col-span-12 max-md:px-3 max-md:py-2 ${className}`}
       >
         <input
           type={type}
@@ -54,6 +54,7 @@ function ContactForm({ setFormData, setStep }) {
         name={"company"}
         type={"text"}
         className="border-t"
+        labelcn="md:border-t"
       />
       <CustomForm title={"担当者様のお名前"} name={"name"} type={"text"} />
       <CustomForm title={"お電話番号"} name={"tel"} type={"number"} />

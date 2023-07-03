@@ -18,7 +18,6 @@
   }
 
   .st1 {
-    fill:none;
     stroke-dasharray: 570px;
     stroke-dashoffset: 570px;
     stroke: white;
