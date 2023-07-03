@@ -13,7 +13,7 @@
     }
   }
 
-  svg{
+  path{
     animation: fill 1.5s ease-in-out forwards 2s;
   }
 
@@ -22,7 +22,7 @@
     stroke-dashoffset: 570px;
     stroke: white;
     stroke-width: 3px;
-    animation: line-anim 1s ease forwards 0s;
+    animation: line-anim 1s ease forwards 0s, fill 1.5s ease-in-out forwards 2s;
   }
 
   .st2 {
@@ -30,14 +30,16 @@
     stroke-dashoffset: 570px;
     stroke: white;
     stroke-width: 3px;
-    animation: line-anim 1s ease forwards 0.3s;
+    animation: line-anim 1s ease forwards 0.3s, fill 1.5s ease-in-out forwards 2s;
+
   }
     .st3 {
     stroke-dasharray: 570px;
     stroke-dashoffset: 570px;
     stroke: white;
     stroke-width: 3px;
-    animation: line-anim 1s ease forwards 0.6s;
+    animation: line-anim 1s ease forwards 0.6s, fill 1.5s ease-in-out forwards 2s;
+
   }
   </style>
 <path class="st1" d="M33.9746 137.383H107.787C124.87 137.383 140.021 140.581 153.245 146.966C166.48 153.357 176.735 162.424 184.016 174.174C191.308 185.914 194.954 199.654 194.954 215.404C194.954 231.169 191.308 244.924 184.016 256.674C176.735 268.414 166.48 277.477 153.245 283.862C140.021 290.253 124.87 293.445 107.787 293.445H33.9746V137.383ZM105.995 258.216C119.37 258.216 130.105 254.424 138.204 246.841C146.313 239.258 150.37 228.779 150.37 215.404C150.37 202.029 146.313 191.56 138.204 183.987C130.105 176.404 119.37 172.612 105.995 172.612H78.1204V258.216H105.995Z"/>

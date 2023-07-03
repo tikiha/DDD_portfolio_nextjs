@@ -78,9 +78,8 @@ function HomeSwiper() {
                 <span className="">Driven Design Duo</span>
 
                 <p className="text-h6 text-center mt-4">
-                  グッとくる
-                  <br />
-                  HPお任せください。
+                  熱意と創造力で <br />
+                  ご要望をカタチに
                 </p>
                 <Link
                   className="mt-10 rounded-lg py-4 px-20 relative border border-primary text-primary 
