@@ -6,20 +6,19 @@ const CustomForm = ({ title, name, type, className = "" }) => {
     <>
       <label
         htmlFor={name}
-        className={`col-span-4 max-md:border-x md:border-b border-collapse flex items-center px-2 md:border-l max-md:col-span-12 ${className}`}
+        className={`col-span-4 max-md:border-x md:border-b border-collapse flex items-center px-3 md:border-l max-md:col-span-12 max-md:pt-2 ${className}`}
       >
         {title}
         <span className="text-red-500">*</span>
       </label>
       <div
         className={`col-span-8 border-x border-b border-collapse flex items-center p-6 text-Dark 
-        max-md:col-span-12 max-md:p-3 ${className}`}
+        max-md:col-span-12 max-md:px-3 max-md:py-2 md:${className}`}
       >
         <input
           type={type}
           className="rounded-md border border-collapse border-slate-500 bg-gray-50 p-1 w-full max-w-40"
           id={name}
-          // placeholder="お名前"
           minLength={1}
           maxLength={30}
           required
@@ -66,14 +65,14 @@ function ContactForm({ setFormData, setStep }) {
       />
       <label
         htmlFor="name"
-        className="col-span-4 max-md:border-x md:border-l border-b border-collapse flex items-center px-2 
-        max-md:col-span-12"
+        className="col-span-4 max-md:border-x md:border-l md:border-b border-collapse flex items-center px-3 
+        max-md:col-span-12 max-md:pt-2"
       >
         お問い合わせ項目<span className="text-red-500">*</span>
       </label>
       <div
         className="col-span-8 border-x border-b border-collapse flex items-center p-6 
-      max-md:col-span-12 max-md:p-3"
+      max-md:col-span-12 max-md:py-2 max-md:px-3"
       >
         <select
           name="select"
@@ -93,16 +92,16 @@ function ContactForm({ setFormData, setStep }) {
       </div>
       <label
         htmlFor="name"
-        className="col-span-4 max-md:border-x md:border-l border-b border-collapse flex items-center px-2 max-md:col-span-12"
+        className="col-span-4 max-md:border-x md:border-l md:border-b border-collapse flex items-center px-3 max-md:pt-2 max-md:col-span-12"
       >
         お問い合わせ内容<span className="text-red-500">*</span>
       </label>
       <div
         className="col-span-8 border-x border-b border-collapse flex items-center p-6 
-      max-md:col-span-12 max-md:p-3"
+      max-md:col-span-12 max-md:py-2 max-md:px-3"
       >
         <textarea
-          className="rounded-md border border-collapse border-slate-500 bg-gray-50 text-body p-1 w-full"
+          className="rounded-md border border-collapse border-slate-500 p-1 bg-gray-50 text-body w-full"
           id="message"
           placeholder="ご要望をお書きください"
           rows={4}
