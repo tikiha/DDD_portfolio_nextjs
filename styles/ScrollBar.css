@@ -36,7 +36,7 @@
 } */
 
 ::-webkit-scrollbar-track {
-  background: var(--background-ScrollBar);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -51,7 +51,5 @@
 }
 
 .scroll-bar {
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumb-color) transparent;
   overflow: overlay;
 }

@@ -34,7 +34,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`min-h-screen text-dark bg-light ${mont.variable} ${notojp.variable} font-notojp `}
+        className={`min-h-[calc(100vh-14px)] text-dark bg-light ${mont.variable} ${notojp.variable} font-notojp `}
       >
         <NavBar />
         {children}

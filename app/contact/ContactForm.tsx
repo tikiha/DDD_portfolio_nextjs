@@ -1,19 +1,19 @@
 "use client";
 import React, { useState } from "react";
 
-const CustomForm = ({ title, name, type }) => {
+const CustomForm = ({ title, name, type, className = "" }) => {
   return (
     <>
       <label
         htmlFor={name}
-        className="col-span-4 border border-collapse flex items-center px-2 max-md:col-span-12"
+        className={`col-span-4 max-md:border-x border-b border-collapse flex items-center px-2 md:border-l max-md:col-span-12 ${className}`}
       >
         {title}
         <span className="text-red-500">*</span>
       </label>
       <div
-        className="col-span-8 border border-collapse flex items-center p-6 text-Dark 
-      max-md:col-span-12 max-md:p-3"
+        className={`col-span-8 border-x border-b border-collapse flex items-center p-6 text-Dark 
+        max-md:col-span-12 max-md:p-3 ${className}`}
       >
         <input
           type={type}
@@ -50,7 +50,12 @@ function ContactForm({ setFormData, setStep }) {
       onSubmit={handleConfirm}
       className="flex-shrink-0 mx-auto lg:w-[1024px] w-full px-4 grid grid-cols-12 border-collapse text-body"
     >
-      <CustomForm title={"会社名または屋号"} name={"company"} type={"text"} />
+      <CustomForm
+        title={"会社名または屋号"}
+        name={"company"}
+        type={"text"}
+        className="border-t"
+      />
       <CustomForm title={"担当者様のお名前"} name={"name"} type={"text"} />
       <CustomForm title={"お電話番号"} name={"tel"} type={"number"} />
       <CustomForm title={"メールアドレス"} name={"email"} type={"text"} />
@@ -61,13 +66,13 @@ function ContactForm({ setFormData, setStep }) {
       />
       <label
         htmlFor="name"
-        className="col-span-4 border border-collapse flex items-center px-2 
+        className="col-span-4 max-md:border-x md:border-l border-b border-collapse flex items-center px-2 
         max-md:col-span-12"
       >
         お問い合わせ項目<span className="text-red-500">*</span>
       </label>
       <div
-        className="col-span-8 border border-collapse flex items-center p-6 
+        className="col-span-8 border-x border-b border-collapse flex items-center p-6 
       max-md:col-span-12 max-md:p-3"
       >
         <select
@@ -88,12 +93,12 @@ function ContactForm({ setFormData, setStep }) {
       </div>
       <label
         htmlFor="name"
-        className="col-span-4 border border-collapse flex items-center px-2 max-md:col-span-12"
+        className="col-span-4 max-md:border-x md:border-l border-b border-collapse flex items-center px-2 max-md:col-span-12"
       >
         お問い合わせ内容<span className="text-red-500">*</span>
       </label>
       <div
-        className="col-span-8 border border-collapse flex items-center p-6 
+        className="col-span-8 border-x border-b border-collapse flex items-center p-6 
       max-md:col-span-12 max-md:p-3"
       >
         <textarea
