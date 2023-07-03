@@ -6,7 +6,7 @@
     }
   }
 
-  @keyframes fill {
+  @keyframes fillin {
     to {
       fill: black;
       stroke:white;
@@ -14,7 +14,7 @@
   }
 
   path{
-    animation: fill 1.5s ease-in-out forwards 2s;
+    animation: fillin 1.5s ease-in-out forwards 2s;
   }
 
   .st1 {
@@ -22,7 +22,7 @@
     stroke-dashoffset: 570px;
     stroke: white;
     stroke-width: 3px;
-    animation: line-anim 1s ease forwards 0s, fill 1.5s ease-in-out forwards 2s;
+    animation: line-anim 1s ease forwards 0s, fillin 1.5s ease-in-out forwards 2s;
   }
 
   .st2 {
@@ -30,7 +30,7 @@
     stroke-dashoffset: 570px;
     stroke: white;
     stroke-width: 3px;
-    animation: line-anim 1s ease forwards 0.3s, fill 1.5s ease-in-out forwards 2s;
+    animation: line-anim 1s ease forwards 0.3s, fillin 1.5s ease-in-out forwards 2s;
 
   }
     .st3 {
@@ -38,7 +38,7 @@
     stroke-dashoffset: 570px;
     stroke: white;
     stroke-width: 3px;
-    animation: line-anim 1s ease forwards 0.6s, fill 1.5s ease-in-out forwards 2s;
+    animation: line-anim 1s ease forwards 0.6s, fillin 1.5s ease-in-out forwards 2s;
 
   }
   </style>

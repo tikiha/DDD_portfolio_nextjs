@@ -36,9 +36,8 @@ const Page = () => {
           唯一無二を創り出します｡
         </p>
         <p className="mt-6 text-base/loose">
-          小さな組織だからできる、細やかで迅速なサポート
-          <br />
-          お客様へ寄り添い、不安や悩みの解決をお手伝いいたします。
+          二人組だからできる意思疎通の速さ <br />
+          一緒に最高傑作を創りあげましょう｡
         </p>
       </div>
       <Works
@@ -115,7 +114,7 @@ const Page = () => {
         <div className="h-1/2 flex flex-col justify-between p-10 px-24 max-lg:p-10">
           <h2 className="text-2xl font-bold">ご意見をお聞かせください</h2>
           <p className="mt-10 text-base/loose max-lg:mt-5">
-            ホームページ制作やリニューアルのご依頼・ご相談はこちらからお問い合わせください。些細なことでも構いません。お気軽にご相談ください。
+            HP・LP制作やリニューアルのご依頼・ご相談はこちらから。そもそも自分が必要としているのはLPなのかHPなのかなど、どんなことでも構いません。お気軽にご相談ください。
           </p>
           <div className="flex justify-center">
             <Link
