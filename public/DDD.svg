@@ -14,11 +14,11 @@
   }
 
   path{
-    fill:none;
     animation: fillin 1.5s ease-in-out forwards 2s;
   }
 
   .st1 {
+    fill:none;
     stroke-dasharray: 570px;
     stroke-dashoffset: 570px;
     stroke: white;
