@@ -12,14 +12,14 @@ const Page = () => {
     <RowSlide className="">
       <HomeSwiper />
 
-      <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[33vh]">
+      <div className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light max-lg:w-full py-40">
         <p className="text-base/loose">
           静的サイトからCMS導入どの後の運用まで。 Webに関する知識がない方に
           「優しい」Webサイトをお届けいたします。
         </p>
       </div>
-      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-h1 text-Light font-bold ">
+      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[50vh]">
+        <h1 className="font-mont z-10 text-h3 text-Light font-bold max-lg:text-4xl max-md:text-3xl">
           About US
         </h1>
         <Image
@@ -31,8 +31,8 @@ const Page = () => {
           // priority
         />
       </div>
-      <div className="flex-shrink-0 h-full w-1/2 flex flex-col items-center justify-center px-10 bg-light max-lg:w-full max-lg:h-[50vh]">
-        <p className="text-2xl/relaxed font-bold">
+      <div className="flex-shrink-0 h-full w-1/2 flex flex-col items-center justify-center px-10 bg-light max-lg:hidden">
+        <p className="text-h4/relaxed font-bold">
           「優しい」を届ける。
           <br />
           それが私たちの使命です。
@@ -79,10 +79,12 @@ const Page = () => {
 
       <div
         className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center bg-primary text-Light p-10
-      max-lg:w-full max-lg:h-[50vh]"
+      max-lg:w-full max-lg:py-40"
       >
-        <h1 className="font-mont text-h1 font-bold mb-10">Works</h1>
-        <p className="text-base/loose">
+        <h1 className="font-mont text-h3 font-bold max-lg:text-4xl max-md:text-3xl">
+          Works
+        </h1>
+        <p className="text-base/loose mt-6">
           Webサイトに訪れたユーザー目線で、ユーザビリティの高いサイト制作を行います。ブログ投稿機能、プラグインを用いてご希望に応じたカスタマイズをいたします。
         </p>
       </div>
@@ -91,7 +93,7 @@ const Page = () => {
 
       <div
         className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light
-      max-lg:w-full max-lg:h-[33vh]"
+      max-lg:hidden"
       >
         <p className="text-base/loose">
           静的サイトからCMS導入どの後の運用まで。 Webに関する知識がない方に
@@ -99,8 +101,8 @@ const Page = () => {
         </p>
       </div>
 
-      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[33vh]">
-        <h1 className="font-mont z-10 text-h1 text-Light font-bold">Contact</h1>
+      <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:hidden">
+        <h1 className="font-mont z-10 text-h3 text-Light font-bold">Contact</h1>
         <Image
           src="/Pic/Contact.png"
           fill
@@ -111,7 +113,7 @@ const Page = () => {
         />
       </div>
 
-      <div className="flex-shrink-0 flex flex-col h-full w-1/2 bg-light max-lg:w-full max-lg:h-fit">
+      <div className="flex-shrink-0 flex flex-col h-full w-1/2 bg-light max-lg:hidden">
         <div className="h-1/2 flex flex-col justify-between p-10 px-24 max-lg:p-10">
           <h2 className="text-2xl font-bold">ご意見をお聞かせください</h2>
           <p className="mt-10 text-base/loose max-lg:mt-5">

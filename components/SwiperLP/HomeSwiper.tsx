@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper";
 import "./swiper.scss";
 import "./pagination.scss";
+import Link from "next/link";
 
 const images = [
   "/OfficePic/officePic1.png",
@@ -30,7 +31,7 @@ function HomeSwiper() {
     return () => clearTimeout(timeoutId);
   }, [activeSlide]);
   return (
-    <div className="w-2/3 h-full text-Light flex-shrink-0 max-lg:w-full max-lg:h-[70vh] relative">
+    <div className="w-2/3 h-full text-Light flex-shrink-0 max-lg:w-full max-lg:h-[80vh] relative">
       <Swiper
         className="w-full h-full bg-light"
         onSlideChange={(swiper) => {
@@ -67,20 +68,31 @@ function HomeSwiper() {
           >
             {showText && activeSlide === index ? (
               <motion.div
-                className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 w-full px-24 max-md:px-14"
+                className="absolute flex flex-col items-center top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 w-full px-24 max-md:px-14"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 100, transition: { duration: 1.5 } }}
               >
-                <h1 className="text-h1/relaxed font-bold text-center mb-4">
+                <h1 className="text-8xl max-md:text-7xl font-bold text-center tracking-tighter">
+                  DDD
+                </h1>
+                <span className="">Driven Design Duo</span>
+
+                <p className="text-h6 text-center mt-4">
                   グッとくる
                   <br />
                   HPお任せください。
-                </h1>
-                <p className="text-body/loose max-md:text-body/normal">
-                  元ラガーマンのWebデザイナー二人組です。あなたの要望に全力で”トライ”します。
-                  組織名にある「Driven」はラグビー由来の熱意のある献身的な姿勢のこと。
-                  HP制作など、サービス詳細は以下のボタンからご覧ください。
                 </p>
+                <Link
+                  className="mt-10 rounded-lg py-4 px-20 relative border border-primary text-primary 
+              hover:text-light overflow-hidden group
+              max-lg:mt-6 max-lg:px-12 max-lg:py-3"
+                  href={"/contact"}
+                >
+                  <div className="w-full h-full bg-primary absolute -left-[100%] top-0 group-hover:translate-x-full duration-500" />
+                  <span className="z-10 relative delay-100">
+                    お問い合わせへ
+                  </span>
+                </Link>
               </motion.div>
             ) : (
               false

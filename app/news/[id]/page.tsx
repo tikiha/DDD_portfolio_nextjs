@@ -44,9 +44,9 @@ export default async function Page({ params }) {
   const revisedAt = FormatDate(targetArticle.revisedAt);
 
   return (
-    <main className="w-[calc(100vw-12px)] h-full bg-light">
+    <main className="w-full h-full bg-light ">
       <div className="h-full px-4 mx-auto mt-16 w-full xl:w-[1280px]">
-        <div className="w-2/3 lg:w-[1024px] mx-auto pt-6 pb-4 flex items-center text-body">
+        <div className="mx-auto lg:w-[1024px] w-full px-4 pt-8 pb-6 flex items-center">
           <Link href={"/"}>
             <Home size={16} className="max-md:w-3" />
           </Link>
@@ -57,7 +57,7 @@ export default async function Page({ params }) {
           <span className="mx-2">{">"}</span>
           <span className="underline text-primary">{targetArticle.title}</span>
         </div>
-        <span className="border w-[calc(100vw-12px)] absolute left-0" />
+        <span className="border w-full absolute left-0" />
         <div
           className="px-12 py-10 lg:absolute lg:left-1/2 mt-8 top-36 lg:-translate-x-1/2 z-10 bg-light lg:w-3/4 w-full
         max-md:px-6 max-md:py-5  border border-mute rounded-lg"

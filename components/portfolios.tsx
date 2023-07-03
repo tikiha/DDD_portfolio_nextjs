@@ -10,7 +10,7 @@ const IMacCustom = ({ src }) => {
   const [hover, setHover] = useState(false);
   return (
     <motion.div
-      className="h-full mx-auto relative max-md:px-7 max-md:py-6 flex items-center"
+      className="h-full mx-auto relative max-md:px-7 max-md:mt-16 max-md:mb-8 max-md:h-fit flex items-center"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       onHoverStart={() => setHover(true)}
@@ -43,7 +43,7 @@ const IMacCustom = ({ src }) => {
 const Portfolios = () => {
   return (
     <div
-      className="flex-shrink-0 h-full w-full px-32 py-10 gap-x-20 gap-y-14 mx-auto bg-light grid grid-cols-3 text-Light
+      className="flex-shrink-0 h-full w-full lg:px-32 lg:py-10 lg:gap-x-20 lg:gap-y-14 mx-auto bg-light grid grid-cols-3 text-Light
       max-lg:px-12 max-lg:py-8 max-lg:gap-x-16 max-lg:gap-y-20
     max-md:grid-cols-2 max-md:p-0 max-md:gap-0"
     >

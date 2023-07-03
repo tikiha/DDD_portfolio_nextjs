@@ -17,9 +17,9 @@ async function Page() {
       <div className="w-full h-16 bg-light fixed -translate-y-[100%] z-10" />
       <div
         className="flex-shrink-0 w-1/3 h-full flex items-center justify-center border-r border-slate-400
-      max-lg:w-full max-lg:h-[33vh] max-lg:border-b"
+      max-lg:w-full max-lg:h-[50vh] max-lg:border-b"
       >
-        <h1 className="font-mont font-bold text-h1 ">NEWS</h1>
+        <h1 className="font-mont font-bold text-h2 ">NEWS</h1>
       </div>
       {articles.contents.map((article) => (
         <div
@@ -31,16 +31,16 @@ async function Page() {
             <Calendar size={16} className="stroke-Light max-md:w-3" />
             <span>&nbsp;{FormatDate(article.publishedAt)}</span>
           </div>
-          <div className="h-full w-full flex flex-col items-center justify-center max-lg:py-10">
+          <div className="h-full w-full flex flex-col items-center justify-center max-lg:my-4 max-lg:items-start">
             <Link
               href={`news/${article.id}`}
-              className="text-h5 font-semibold line-clamp-2 h-14 hover:text-primary duration-300"
+              className="text-h5 font-semibold line-clamp-2 h-14 hover:text-primary max-lg:h-fit duration-300"
             >
               {article.title}
             </Link>
             <Link
               href={`news/${article.id}`}
-              className="w-full overflow-hidden aspect-[16/9] relative mb-2 mt-1"
+              className="w-full overflow-hidden aspect-[16/9] relative lg:mb-2 lg:mt-1 max-lg:mt-4"
             >
               {article.eyecatch ? (
                 <img
@@ -58,7 +58,7 @@ async function Page() {
                 </div>
               )}
             </Link>
-            <div className="w-full text-body/loose line-clamp-2">
+            <div className="w-full text-body/loose line-clamp-2 max-lg:my-2">
               {article.content}
             </div>
           </div>

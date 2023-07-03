@@ -16,7 +16,7 @@ const Page = () => {
   return (
     <main className="flex flex-col items-center w-full h-full bg-light mt-16">
       <div className="flex-shrink-0 w-full h-[66vh] relative max-lg:h-[33vh]">
-        <h1 className="font-mont absolute left-1/2 top-1/2 text-Light font-bold text-h1 z-10 -translate-x-1/2 -translate-y-1/2">
+        <h1 className="font-mont absolute left-1/2 top-1/2 text-Light font-bold text-h2 z-10 -translate-x-1/2 -translate-y-1/2">
           Contact
         </h1>
         <Image
@@ -28,7 +28,7 @@ const Page = () => {
         />
       </div>
       <div
-        className="flex-shrink-0 flex items-center py-6 text-dark mx-auto xl:w-[1280px] w-full px-4 text-body 
+        className="flex-shrink-0 flex items-center py-6 text-dark mx-auto lg:w-[1024px] w-full px-4 text-body 
         max-md:py-3"
       >
         <Link href={"/"} className="">

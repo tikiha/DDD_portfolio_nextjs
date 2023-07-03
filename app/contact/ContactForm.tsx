@@ -6,7 +6,7 @@ const CustomForm = ({ title, name, type, className = "" }) => {
     <>
       <label
         htmlFor={name}
-        className={`col-span-4 max-md:border-x border-b border-collapse flex items-center px-2 md:border-l max-md:col-span-12 ${className}`}
+        className={`col-span-4 max-md:border-x md:border-b border-collapse flex items-center px-2 md:border-l max-md:col-span-12 ${className}`}
       >
         {title}
         <span className="text-red-500">*</span>
