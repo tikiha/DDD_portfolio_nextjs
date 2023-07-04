@@ -13,13 +13,21 @@ import FormatDate from "@/lib/formatDate";
 
 const NewsCarousel = ({ articles }) => {
   let Articles;
-  if (articles.contents.length < 4) {
+  if (articles.contents.length < 3) {
+    Articles = [
+      ...articles.contents,
+      ...articles.contents,
+      ...articles.contents,
+      ...articles.contents,
+      ...articles.contents,
+    ];
+  } else if (articles.contents.length < 5) {
     Articles = [
       ...articles.contents,
       ...articles.contents,
       ...articles.contents,
     ];
-  } else if (articles.contents.length < 8) {
+  } else if (articles.contents.length < 9) {
     Articles = [...articles.contents, ...articles.contents];
   } else {
     Articles = [...articles.contents];

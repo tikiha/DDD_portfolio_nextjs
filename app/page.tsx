@@ -40,9 +40,20 @@ const Page = () => {
           一緒に最高傑作を創りあげましょう｡
         </p>
       </div>
+      <div
+        className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center text-Light p-10
+      max-lg:w-full max-lg:py-40 bg-primary"
+      >
+        <h1 className="font-mont text-h3 font-bold max-lg:text-4xl max-md:text-3xl ">
+          Works
+        </h1>
+        <p className="text-base/loose mt-6">
+          Webサイトに訪れたユーザー目線で、ユーザビリティの高いサイト制作を行います。ブログ投稿機能、プラグインを用いてご希望に応じたカスタマイズをいたします。
+        </p>
+      </div>
       <Works
         title={"LP制作"}
-        src={"/Pic/LP.png"}
+        src={"/Pic/LP.jpg"}
         paragraph={
           "一枚簡潔の広告・宣伝に特化したWebページ制作です。お問い合わせに繋がる設計をいたします。ご希望に沿って、ランディングページへの流入手段からご案内もいたします。"
         }
@@ -73,21 +84,6 @@ const Page = () => {
           "アプリ導入やページ構成について一緒に確認出来たらと思いますので、お気軽にご相談ください。"
         }
       />
-
-      <div
-        className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center text-Light p-10
-      max-lg:w-full max-lg:py-40 bg-primary"
-      >
-        <h1 className="font-mont text-h3 font-bold max-lg:text-4xl max-md:text-3xl ">
-          Works
-        </h1>
-        <p className="text-base/loose mt-6">
-          Webサイトに訪れたユーザー目線で、ユーザビリティの高いサイト制作を行います。ブログ投稿機能、プラグインを用いてご希望に応じたカスタマイズをいたします。
-        </p>
-      </div>
-
-      <div className="flex-shrink-0 h-full w-1/3" />
-
       <div
         className="flex-shrink-0 h-full w-1/3 flex items-center justify-center px-10 bg-light
       max-lg:hidden"
@@ -97,6 +93,7 @@ const Page = () => {
           「優しい」Webサイトをお届けいたします。
         </p>
       </div>
+      <div className="flex-shrink-0 h-full w-1/3" />
 
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:hidden">
         <h1 className="font-mont z-10 text-h3 text-Light font-bold">Contact</h1>

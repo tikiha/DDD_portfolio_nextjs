@@ -44,9 +44,9 @@ export default async function Page({ params }) {
   const revisedAt = FormatDate(targetArticle.revisedAt);
 
   return (
-    <main className="w-full h-full bg-light ">
+    <main className="w-full h-full ">
       <div className="h-full px-4 mx-auto mt-16 w-full xl:w-[1280px]">
-        <div className="mx-auto lg:w-[1024px] w-full px-4 pt-8 pb-6 flex items-center">
+        <div className="mx-auto w-full px-4 pt-8 pb-6 flex items-center">
           <Link href={"/"}>
             <Home size={16} className="max-md:w-3" />
           </Link>
@@ -59,25 +59,32 @@ export default async function Page({ params }) {
         </div>
         <span className="border w-full absolute left-0" />
         <div
-          className="px-12 py-10 lg:absolute lg:left-1/2 mt-8 top-36 lg:-translate-x-1/2 z-10 bg-light lg:w-3/4 w-full
-        max-md:px-6 max-md:py-5  border border-mute rounded-lg"
+          className="w-fit min-w-[80%] h-full border border-mute rounded-lg mt-6 mx-auto md:translate-y-1/4 bg-light py-6 px-20
+        max-md:w-full max-md:px-4 max-md:py-3
+        "
         >
-          <div className="absolute -translate-y-1/2 text-sm flex items-center">
-            <Calendar size={16} className="stroke-dark max-md:w-3" />
+          <div className="text-sm max-md:text-xs flex items-center font-light">
+            <Calendar
+              size={16}
+              className="stroke-dark max-md:w-3 stroke-[0.8px]"
+            />
             <span>&nbsp;{publishedAt}</span>
             {publishedAt === revisedAt ? null : (
               <>
-                <RefreshCcw size={16} className="ml-3 stroke-dark" />
+                <RefreshCcw
+                  size={16}
+                  className="ml-3 stroke-dark stroke-[0.8px]"
+                />
                 <span>&nbsp;{revisedAt}</span>
               </>
             )}
           </div>
-          <h1 className="text-h3 font-bold mt-2 text-center">
+          <h1 className="text-h3 font-semibold mt-2 text-center w-full">
             {targetArticle.title}
           </h1>
         </div>
         {targetArticle.eyecatch ? (
-          <div className="w-full overflow-hidden mt-8 lg:mt-24 aspect-[16/9] relative ">
+          <div className="w-full overflow-hidden aspect-[16/9] relative -z-10 max-md:mt-4">
             <img
               srcSet={targetArticle.eyecatch.url}
               alt={"eyecatch"}
