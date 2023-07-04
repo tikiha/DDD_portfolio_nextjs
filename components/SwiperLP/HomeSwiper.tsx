@@ -13,10 +13,10 @@ import "./pagination.scss";
 import Link from "next/link";
 
 const images = [
-  "/OfficePic/officePic1.png",
-  "/OfficePic/officePic2.png",
-  "/OfficePic/officePic3.png",
-  "/OfficePic/officePic4.png",
+  "/Pic/carousel1.jpg",
+  "/Pic/carousel2.jpg",
+  "/Pic/carousel3.jpg",
+  "/Pic/carousel4.jpg",
 ];
 
 function HomeSwiper() {
@@ -82,12 +82,12 @@ function HomeSwiper() {
                   ご要望をカタチに
                 </p>
                 <Link
-                  className="mt-10 rounded-lg py-4 px-20 relative border border-primary text-primary 
-              hover:text-light overflow-hidden group
+                  className="mt-10 rounded-lg py-4 px-20 relative border border-Light text-Light
+              hover:border-secondary overflow-hidden group
               max-lg:mt-6 max-lg:px-12 max-lg:py-3"
                   href={"/contact"}
                 >
-                  <div className="w-full h-full bg-primary absolute -left-[100%] top-0 group-hover:translate-x-full duration-500" />
+                  <div className="w-full h-full bg-secondary absolute -left-[100%] top-0 group-hover:translate-x-full duration-500" />
                   <span className="z-10 relative delay-100">
                     お問い合わせへ
                   </span>

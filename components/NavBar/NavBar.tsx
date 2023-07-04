@@ -15,8 +15,8 @@ const CustomLink = ({ href, title, className = "" }) => {
       href={href}
       className={`font-mont ${className} ${
         pathname === href
-          ? "text-primary"
-          : "hover:text-primary  ease duration-200"
+          ? "text-secondary"
+          : "hover:text-secondary  ease duration-200"
       }`}
     >
       {title}
@@ -72,10 +72,10 @@ const NavBar = () => {
       </Link>
       {/* <DDDLogo className="" /> */}
       <nav className="max-md:hidden flex items-center">
-        <CustomLink href={"/"} title={"Home"} className="mr-4" />
-        <CustomLink href={"/news"} title={"News"} className="mx-4" />
-        <CustomLink href={"/works"} title={"Works"} className="mx-4" />
-        <CustomLink href={"/contact"} title={"Contact"} className="mx-4" />
+        <CustomLink href={"/"} title={"HOME"} className="mr-4" />
+        <CustomLink href={"/news"} title={"NEWS"} className="mx-4" />
+        <CustomLink href={"/works"} title={"WORKS"} className="mx-4" />
+        <CustomLink href={"/contact"} title={"CONTACT"} className="mx-4" />
         <ThemeSwitcher className="ml-4" />
       </nav>
 

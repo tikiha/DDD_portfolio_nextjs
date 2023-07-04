@@ -59,21 +59,24 @@ const ContactConfirm = ({ formData, setStep }) => {
       />
       <CustomConfirm title={"お問い合わせ項目"} formData={formData.select} />
       <CustomConfirm title={"お問い合わせ内容"} formData={formData.message} />
-      <button
-        onClick={() => setStep(1)}
-        className="px-4 py-2 bg-gray-700 text-light rounded-lg mt-10 col-start-6"
-      >
-        戻る
-      </button>
-      <button
-        onClick={handleSubmit}
-        disabled={loading}
-        className="px-4 py-2 bg-gray-700 text-light rounded-lg mt-10 col-start-6 
+      <div className="col-span-12 flex items-center justify-center mt-10">
+        <button
+          onClick={() => setStep(1)}
+          className="px-4 py-2 bg-gray-500 rounded-lg text-Light 
+          disabled:bg-gray-400 disabled:text-gray-100 disabled:cursor-default"
+        >
+          戻る
+        </button>
+        <button
+          onClick={handleSubmit}
+          disabled={loading}
+          className="px-4 py-2 bg-gray-500 text-Light rounded-lg ml-10
         disabled:bg-gray-400 disabled:text-gray-100 disabled:cursor-default
         "
-      >
-        送信
-      </button>
+        >
+          送信
+        </button>
+      </div>
     </div>
   );
 };

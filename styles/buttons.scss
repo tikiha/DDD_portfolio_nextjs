@@ -1,0 +1,58 @@
+.btn-form {
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fdfbfb),
+    to(#ebedee)
+  );
+  background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+  box-shadow: inset 1px 1px 1px #fff;
+}
+
+.btn-form:hover {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#fdfbfb),
+    to(#ebedee)
+  );
+  background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* ダークモード */
+// @media (prefers-color-scheme: dark) {
+//   .btn-form {
+//     border: 1px solid #555;
+//     // background: #222;
+//     background: -webkit-gradient(
+//       linear,
+//       left top,
+//       left bottom,
+//       from(#333),
+//       to(#222)
+//     );
+//     // background: -webkit-linear-gradient(top, #333 0%, #222 100%);
+//     // background: linear-gradient(to bottom, #333 0%, #222 100%);
+//     -webkit-box-shadow: inset 1px 1px 1px #000;
+//     box-shadow: inset 1px 1px 1px #000;
+//   }
+
+//   .btn-form:hover {
+//     background: -webkit-gradient(
+//       linear,
+//       left bottom,
+//       left top,
+//       from(#333),
+//       to(#111)
+//     );
+//     background: -webkit-linear-gradient(bottom, #333 0%, #222 100%);
+//     background: linear-gradient(to top, #333 0%, #222 100%);
+//   }
+// }

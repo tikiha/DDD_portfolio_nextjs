@@ -1,0 +1,85 @@
+/* theme */
+:root {
+  --light: #fcfcfc;
+  --dark: #222;
+  --primary: hsl(38, 50%, 50%);
+  --secondary: hsl(38, 78%, 58%);
+  --bg: hsl(0, 33%, 96%);
+  --primary-dark: hsl(28, 79%, 52%);
+  --secondary-dark: hsl(28, 79%, 52%);
+
+  --foreground-color: var(--light);
+  --background-color: var(--dark);
+  --primary-color: var(--primary);
+  --secondary-color: var(--secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-color: var(--light);
+    --background-color: var(--dark);
+    --primary-color: var(--primary-dark);
+    --secondary-color: var(--secondary-dark);
+  }
+}
+
+.light {
+  --foreground-color: var(--dark);
+  --background-color: var(--light);
+  --primary-color: var(--primary);
+  --secondary-color: var(--secondary);
+}
+
+.dark {
+  --foreground-color: var(--light);
+  --background-color: var(--dark);
+  --primary-color: var(--primary-dark);
+  --secondary-color: var(--secondary-dark);
+}
+
+/* font-size */
+
+/* default */
+:root {
+  --h1: 80px;
+  --h2: 60px;
+  --h3: 40px;
+  --h4: 22px;
+  --h5: 20px;
+  --h6: 18px;
+  --body: 16px;
+}
+
+/* tablet */
+@media screen and (max-width: 1023px) {
+  :root {
+    --large: 50px;
+    --h1: 42px;
+    --h2: 32px;
+    --h3: 26px;
+    --h4: 22px;
+    --h5: 20px;
+    --h6: 18px;
+    --body: 16px;
+  }
+}
+
+/* phone */
+@media screen and (max-width: 767px) {
+  :root {
+    --large: 32px;
+    --h1: 26px;
+    --h2: 24px;
+    --h3: 22px;
+    --h4: 20px;
+    --h5: 18px;
+    --h6: 16px;
+    --body: 14px;
+  }
+}
+
+body {
+  font-size: var(--body);
+  color: var(--foreground-color);
+  background: var(--background-color);
+}

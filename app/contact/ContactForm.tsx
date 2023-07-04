@@ -114,11 +114,12 @@ function ContactForm({ setFormData, setStep }) {
       <div className="col-span-12 flex items-center justify-center mt-10 max-md:mt-5">
         <button
           type="submit"
-          className="px-4 py-2 bg-gray-500 rounded-lg text-Light 
+          className="px-4 py-2 bg-gray-500 rounded-lg text-dark font-light
         disabled:bg-gray-400 disabled:text-gray-100 disabled:cursor-default
+        btn-form
         "
         >
-          確認
+          確認へ
         </button>
       </div>
     </form>

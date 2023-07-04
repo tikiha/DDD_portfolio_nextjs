@@ -1,0 +1,55 @@
+:root {
+  --thumb: #606060;
+  --thumb-hover: #909090;
+  --thumb-width: 12px;
+  --thumb-height: 14px;
+  --background-ScrollBar: var(--background-color);
+
+  --thumb-color: var(--thumb);
+  --thumb-color-hover: var(--thumb-hover);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --thumb-color: var(--thumb-hover);
+    --thumb-color-hover: var(--thumb);
+  }
+}
+
+.light {
+  --thumb-color: var(--thumb);
+  --thumb-color-hover: var(--thumb-hover);
+}
+
+.dark {
+  --thumb-color: var(--thumb-hover);
+  --thumb-color-hover: var(--thumb);
+}
+
+::-webkit-scrollbar {
+  height: var(--thumb-height);
+  width: var(--thumb-width);
+}
+
+/* :hover::-webkit-scrollbar {
+  height: 20px;
+} */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 7px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--thumb-color-hover);
+}
+
+.scroll-bar {
+  overflow: overlay;
+}

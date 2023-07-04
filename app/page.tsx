@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import officePic from "./../public/OfficePic/officePic.jpg";
+import officePic from "./../public/OfficePic/officeBg.png";
 import HomeCarousel from "@/components/HomeCarousel";
 import Works from "@/components/Works";
 import Link from "next/link";
@@ -22,11 +22,11 @@ const Page = () => {
           About US
         </h1>
         <Image
-          src="/Pic/About.png"
+          src="/Pic/About.jpg"
           fill
           sizes="100vh"
           alt={"About Pic"}
-          className="h-full object-cover object-left"
+          className="h-full object-cover object-center"
           // priority
         />
       </div>
@@ -76,7 +76,7 @@ const Page = () => {
 
       <div
         className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center text-Light p-10
-      max-lg:w-full max-lg:py-40 bg-gradient-works"
+      max-lg:w-full max-lg:py-40 bg-primary"
       >
         <h1 className="font-mont text-h3 font-bold max-lg:text-4xl max-md:text-3xl ">
           Works
@@ -101,7 +101,7 @@ const Page = () => {
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:hidden">
         <h1 className="font-mont z-10 text-h3 text-Light font-bold">Contact</h1>
         <Image
-          src="/Pic/Contact.png"
+          src="/Pic/Contact.jpg"
           fill
           sizes="100vh"
           alt={"Contact Pic"}
@@ -118,21 +118,21 @@ const Page = () => {
           </p>
           <div className="flex justify-center">
             <Link
-              className="mt-10 rounded-lg py-4 px-10 relative border border-primary text-primary 
-              hover:text-light overflow-hidden group
+              className="mt-10 rounded-lg py-4 px-10 relative border border-secondary text-secondary
+              hover:text-Light overflow-hidden group
               max-lg:mt-5 max-lg:px-4 max-lg:py-2"
               href={"/contact"}
             >
-              <div className="w-full h-full bg-primary absolute -left-60 top-0 group-hover:translate-x-60 duration-500" />
+              <div className="w-full h-full bg-secondary absolute -left-60 top-0 group-hover:translate-x-60 duration-500" />
               <span className="z-10 relative delay-100">お問い合わせへ</span>
             </Link>
           </div>
         </div>
         <div className="h-1/2 w-full relative max-lg:h-[33lvh] xs:h-4">
           <Image
-            src="/Pic/Consul.png"
+            src="/Pic/ContactHome.png"
             fill
-            sizes="100%"
+            sizes="100vw"
             alt={"Consul Pic"}
             className="w-full object-cover object-center"
             // priority
@@ -143,7 +143,7 @@ const Page = () => {
       <Image
         src={officePic}
         alt={"office"}
-        className="fixed w-screen h-full -z-50 max-md:hidden"
+        className="fixed w-screen h-full -z-50 max-md:hidden object-cover"
         priority
       />
     </RowSlide>

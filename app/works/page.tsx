@@ -15,17 +15,17 @@ const Page = () => {
       <div className="flex-shrink-0 h-full w-2/3 flex items-center justify-center relative max-lg:w-full max-lg:h-[50lvh]">
         <h1 className="font-mont z-10 text-h2 text-Light font-bold ">Works</h1>
         <Image
-          src="/Pic/Works.png"
+          src="/Pic/Works.jpg"
           fill
           alt={"Works Pic"}
-          className="h-full object-cover object-left"
+          className="h-full object-cover object-left brightness-75"
           priority
         />
       </div>
       <Portfolios />
       <div className="flex-shrink-0 h-full w-1/3 relative max-lg:w-full max-lg:h-[50lvh]">
         <Image
-          src="/Pic/Happy.png"
+          src="/Pic/Happy.jpg"
           fill
           alt={"Happy Pic"}
           sizes="100vh"
