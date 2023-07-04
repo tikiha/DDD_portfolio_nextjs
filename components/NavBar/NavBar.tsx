@@ -62,13 +62,14 @@ const NavBar = () => {
     flex items-center justify-between px-10 z-30 max-lg:px-4"
     >
       <Link href={"/"} className="h-full flex items-center relative">
-        <Image
+        {/* <Image
           src={"/DDD.svg"}
           alt={"DDDLogo"}
           width={100}
           height={100}
           className="h-[150%] w-auto"
-        />
+        /> */}
+        <DDDLogo className="h-[150%] fill-dark" pathclass="stroke-dark" />
       </Link>
       {/* <DDDLogo className="" /> */}
       <nav className="max-md:hidden flex items-center">
