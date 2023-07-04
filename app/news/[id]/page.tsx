@@ -15,6 +15,7 @@ import React from "react";
 import NewsCarousel from "./(components)/NewsCarousel";
 import FooterY from "@/components/FooterY";
 import FormatDate from "@/lib/formatDate";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   const articles = await microcms.get({ endpoint: "blogs" });
@@ -85,12 +86,11 @@ export default async function Page({ params }) {
         </div>
         {targetArticle.eyecatch ? (
           <div className="w-full overflow-hidden aspect-[16/9] relative -z-10 max-md:mt-4">
-            <img
-              srcSet={targetArticle.eyecatch.url}
+            <Image
+              src={targetArticle.eyecatch.url}
               alt={"eyecatch"}
-              fetchPriority="high"
-              decoding="async"
-              data-nimg="fill"
+              priority
+              fill
               sizes="100vw"
               className=" object-cover object-center"
             />

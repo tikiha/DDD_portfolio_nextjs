@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Calendar } from "lucide-react";
 import FormatDate from "@/lib/formatDate";
 import RowSlide from "@/components/RowSlide";
+import Image from "next/image";
 
 async function Page() {
   const articles = await microcms.get({ endpoint: "blogs" });
@@ -42,14 +43,12 @@ async function Page() {
               className="w-full overflow-hidden aspect-[16/9] relative lg:mb-2 lg:mt-1 max-lg:mt-4"
             >
               {article.eyecatch ? (
-                <img
-                  srcSet={article.eyecatch.url}
+                <Image
+                  src={article.eyecatch.url}
                   alt={"eyecatch"}
-                  fetchPriority="high"
-                  decoding="async"
-                  data-nimg="fill"
-                  sizes="100vw"
-                  className="hover:scale-110 duration-150 object-cover object-center"
+                  fill
+                  sizes="100vh"
+                  className="hover:scale-105 duration-150 object-cover object-center"
                 />
               ) : (
                 <div className="w-full h-full bg-slate-300 flex items-center justify-center transition-all hover:scale-110 max-lg:text-3xl max-md:text-h4">
