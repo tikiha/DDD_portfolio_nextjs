@@ -62,16 +62,14 @@ const ContactConfirm = ({ formData, setStep }) => {
       <div className="col-span-12 flex items-center justify-center mt-10">
         <button
           onClick={() => setStep(1)}
-          className="px-4 py-2 bg-gray-500 rounded-lg text-Light 
-          disabled:bg-gray-400 disabled:text-gray-100 disabled:cursor-default"
+          className="px-4 py-2 rounded-lg text-Dark disabled:text-gray-400 disabled:cursor-default btn-form"
         >
           戻る
         </button>
         <button
           onClick={handleSubmit}
           disabled={loading}
-          className="px-4 py-2 bg-gray-500 text-Light rounded-lg ml-10
-        disabled:bg-gray-400 disabled:text-gray-100 disabled:cursor-default
+          className="px-4 py-2 text-Dark rounded-lg ml-10 disabled:text-gray-400 disabled:cursor-default btn-form
         "
         >
           送信

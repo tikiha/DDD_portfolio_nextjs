@@ -56,7 +56,9 @@ export default async function Page({ params }) {
             News
           </Link>
           <span className="mx-2">{">"}</span>
-          <span className="underline text-primary">{targetArticle.title}</span>
+          <span className="underline text-secondary">
+            {targetArticle.title}
+          </span>
         </div>
         <span className="border w-full absolute left-0" />
         <div

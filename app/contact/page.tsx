@@ -35,7 +35,7 @@ const Page = () => {
           <Home size={16} className="max-md:w-3" />
         </Link>
         <span className="mx-2">{">"}</span>
-        <span className="font-mont underline text-primary">Contact</span>
+        <span className="font-mont underline text-secondary">Contact</span>
       </div>
       <span className="border-t w-full mb-16" />
 
