@@ -104,10 +104,6 @@ export default async function Page({ params }) {
             dangerouslySetInnerHTML={{ __html: `${targetArticle.content}` }}
             className={classes.html}
           />
-          <ul className="flex mt-16 space-x-2">
-            <li>tweet</li>
-            <li>share</li>
-          </ul>
 
           <div className="mt-16 flex w-full h-full rounded-lg outline outline-1 outline-mute">
             {prevArticle ? (

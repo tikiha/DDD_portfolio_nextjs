@@ -18,7 +18,7 @@ const mont = Montserrat({
 });
 
 export const metadata = {
-  title: "DDD HP",
+  title: "DDD",
   description: "Driven Design Duo web creator",
 };
 
