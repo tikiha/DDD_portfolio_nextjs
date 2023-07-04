@@ -2,7 +2,6 @@
 import React from "react";
 import { microcms } from "../../lib/microcmsClient";
 import Link from "next/link";
-import Image from "next/image";
 import Footer from "@/components/Footer";
 import { Calendar } from "lucide-react";
 import FormatDate from "@/lib/formatDate";
@@ -31,10 +30,10 @@ async function Page() {
             <Calendar size={16} className="stroke-Light max-md:w-3" />
             <span>&nbsp;{FormatDate(article.publishedAt)}</span>
           </div>
-          <div className="h-full w-full flex flex-col items-center justify-center max-lg:my-4 max-lg:items-start">
+          <div className="h-full w-full flex flex-col justify-center max-lg:my-4 items-start">
             <Link
               href={`news/${article.id}`}
-              className="text-h4 underline underline-offset-4 w-full font-semibold line-clamp-2 h-[3em] hover:text-secondary max-lg:h-fit duration-300"
+              className="text-h4 underline underline-offset-4 w-fit font-semibold line-clamp-2 h-[3em] hover:text-primary max-lg:h-fit duration-300"
             >
               {article.title}
             </Link>
