@@ -64,7 +64,7 @@ const Page = () => {
       />
       <Works
         title={"ホームページ制作"}
-        src={"/Pic/HP.png"}
+        src={"/Pic/HP.jpg"}
         paragraph={
           "会社・店舗の顔となるホームページ制作です。制作目的・ご予算・ご希望のデザインなど、ヒアリングを行ったうえで、最善のご提案をいたします。"
         }
@@ -75,7 +75,7 @@ const Page = () => {
       />
       <Works
         title={"ECサイト構築"}
-        src={"/Pic/EC.png"}
+        src={"/Pic/EC.jpg"}
         paragraph={
           "自社商品を販売できるECサイトをShopifyにて構築いたします。構築するだけでなく、実際にどのような発送手続きを行うのか等の運用の部分までお手伝いいたします。"
         }

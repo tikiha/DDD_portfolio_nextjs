@@ -56,10 +56,12 @@ async function Page() {
                 </div>
               )}
             </Link>
-            <div
-              className="w-full text-body/loose line-clamp-2 max-lg:my-2"
-              dangerouslySetInnerHTML={{ __html: `${article.content}` }}
-            />
+            <div className="line-clamp-2">
+              <div
+                className="w-full text-body/loose max-lg:my-2"
+                dangerouslySetInnerHTML={{ __html: `${article.content}` }}
+              />
+            </div>
           </div>
         </div>
       ))}
