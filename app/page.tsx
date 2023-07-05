@@ -18,9 +18,9 @@ const Page = () => {
         </p>
       </div>
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:w-full max-lg:h-[50lvh]">
-        <h1 className="font-mont z-10 text-h3 text-Light font-bold max-lg:text-4xl max-md:text-3xl">
+        <h2 className="font-mont z-10 text-h3 text-Light font-bold max-lg:text-4xl max-md:text-3xl">
           About US
-        </h1>
+        </h2>
         <Image
           src="/Pic/About.jpg"
           fill
@@ -44,9 +44,9 @@ const Page = () => {
         className="flex-shrink-0 h-full w-1/3 flex flex-col items-center justify-center text-Light p-10
       max-lg:w-full max-lg:py-40 bg-primary"
       >
-        <h1 className="font-mont text-h3 font-bold max-lg:text-4xl max-md:text-3xl ">
+        <h2 className="font-mont text-h3 font-bold max-lg:text-4xl max-md:text-3xl ">
           Works
-        </h1>
+        </h2>
         <p className="text-base/loose mt-6">
           Webサイトに訪れたユーザー目線で、ユーザビリティの高いサイト制作を行います。ブログ投稿機能、プラグインを用いてご希望に応じたカスタマイズをいたします。
         </p>
@@ -96,7 +96,7 @@ const Page = () => {
       <div className="flex-shrink-0 h-full w-1/3" />
 
       <div className="flex-shrink-0 h-full w-1/2 flex items-center justify-center relative max-lg:hidden">
-        <h1 className="font-mont z-10 text-h3 text-Light font-bold">Contact</h1>
+        <h2 className="font-mont z-10 text-h3 text-Light font-bold">Contact</h2>
         <Image
           src="/Pic/Contact.jpg"
           fill
@@ -109,7 +109,7 @@ const Page = () => {
 
       <div className="flex-shrink-0 flex flex-col h-full w-1/2 bg-light max-lg:hidden">
         <div className="h-1/2 flex flex-col justify-between p-10 px-24 max-lg:p-10">
-          <h2 className="text-2xl font-bold">ご意見をお聞かせください</h2>
+          <h3 className="text-2xl font-bold">ご意見をお聞かせください</h3>
           <p className="mt-10 text-base/loose max-lg:mt-5">
             HP・LP制作やリニューアルのご依頼・ご相談はこちらから。そもそも自分が必要としているのはLPなのかHPなのかなど、どんなことでも構いません。お気軽にご相談ください。
           </p>

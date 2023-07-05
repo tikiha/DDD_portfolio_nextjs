@@ -14,7 +14,7 @@ const Works = ({ title, src, paragraph, button, ps, classNmae = "" }) => {
       />
       <div className="bg-Dark/40 h-full absolute w-full -z-10" />
       <div className="h-full flex flex-col items-center justify-center text-Light p-5 px-12 max-lg:h-fit max-lg:px-8 max-lg:py-16">
-        <h1 className="text-h3 font-semibold h-[3em]">{title}</h1>
+        <h3 className="text-h3 font-semibold h-[3em]">{title}</h3>
         <p className="text-body/loose h-[9em]">{paragraph}</p>
         <button className="bg-light w-full max-w-[450px] py-3 rounded-xl text-dark max-lg:my-2 text-body">
           {button}

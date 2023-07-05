@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "WORKS | DDD",
+  title: "WORKS",
   description: "Driven Design Duo web creator",
 };
 
