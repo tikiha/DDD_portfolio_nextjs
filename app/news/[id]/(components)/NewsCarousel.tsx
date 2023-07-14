@@ -7,7 +7,7 @@ import { Autoplay, Mousewheel } from "swiper";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/autoplay";
-import { Calendar, Divide } from "lucide-react";
+import { Calendar } from "lucide-react";
 import Link from "next/link";
 import FormatDate from "@/lib/formatDate";
 

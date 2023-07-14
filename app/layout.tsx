@@ -50,6 +50,7 @@ export default function RootLayout({
           content="kr2yKh7Lr3PR09CtNgAJ2Hcd1YKqMJKGlVhzIOnmJT0"
         />
       </head>
+
       <body
         className={`min-h-[calc(100vh-14px)] text-dark bg-light ${mont.variable} ${notojp.variable} font-notojp `}
       >
