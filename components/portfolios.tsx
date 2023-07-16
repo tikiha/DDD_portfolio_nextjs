@@ -52,54 +52,54 @@ const Portfolios = () => {
     >
       <IMacCustom
         src={"/Portfolio/CorporatePortfolio_1/imac.png"}
-        title={"Corporate"}
+        title={"コーポレートサイト"}
         href={"/works/CorporatePortfolio_1"}
       />
       <IMacCustom
         src={"/Portfolio/CorporatePortfolio_1/imac.png"}
-        title={"Corporate"}
+        title={"コーポレートサイト"}
         href={"/works/CorporatePortfolio_1"}
       />
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        Food HP
+        コーポレートサイト
       </span>
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        三菱商事
+        コーポレートサイト
       </span>
       <IMacCustom
-        src={"/Portfolio/CorporatePortfolio_1/imac.png"}
-        title={"Corporate"}
-        href={"/works/CorporatePortfolio_1"}
+        src={"/Portfolio/CoffeePortfolio/imac.png"}
+        title={"珈琲店"}
+        href={"/works/CoffeePortfolio"}
       />
       <IMacCustom
-        src={"/Portfolio/CorporatePortfolio_1/imac.png"}
-        title={"Corporate"}
-        href={"/works/CorporatePortfolio_1"}
+        src={"/Portfolio/CoffeePortfolio/imac.png"}
+        title={"珈琲店"}
+        href={"/works/CoffeePortfolio"}
       />
 
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        三菱商事
+        珈琲店
       </span>
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        三菱商事
+        珈琲店
       </span>
 
       <IMacCustom
-        src={"/Portfolio/CorporatePortfolio_1/imac.png"}
-        title={"Corporate"}
-        href={"/works/CorporatePortfolio_1"}
+        src={"/Portfolio/IzakayaPortfolio/imac.png"}
+        title={"居酒屋"}
+        href={"/works/IzakayaPortfolio"}
       />
       <IMacCustom
-        src={"/Portfolio/CorporatePortfolio_1/imac.png"}
-        title={"Corporate"}
-        href={"/works/CorporatePortfolio_1"}
+        src={"/Portfolio/IzakayaPortfolio/imac.png"}
+        title={"居酒屋"}
+        href={"/works/IzakayaPortfolio"}
       />
 
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        三菱商事
+        居酒屋
       </span>
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        三菱商事
+        居酒屋
       </span>
     </div>
   );

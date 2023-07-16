@@ -12,14 +12,40 @@ const PortfoliosList = {
     period: "1ヶ月",
     url: "https://drivendesignduo.com",
     images: [
-      "Portfolio/CorporatePortfolio_1/mix.jpg",
-      "Portfolio/CorporatePortfolio_1/desktop.jpg",
-      "Portfolio/CorporatePortfolio_1/mobile.jpg",
+      "/Portfolio/CorporatePortfolio_1/mockup.png",
+      "/Portfolio/CorporatePortfolio_1/desktop.png",
+      "/Portfolio/CorporatePortfolio_1/mobile.png",
+    ],
+  },
+  CoffeePortfolio: {
+    title: "珈琲店",
+    range: "デザイン・コーディング",
+    period: "1ヶ月",
+    url: "https://portfolio-coffee.vercel.app",
+    images: [
+      "/Portfolio/CoffeePortfolio/mockup.png",
+      "/Portfolio/CoffeePortfolio/desktop.png",
+      "/Portfolio/CoffeePortfolio/mobile.png",
+    ],
+  },
+  IzakayaPortfolio: {
+    title: "居酒屋",
+    range: "デザイン・コーディング",
+    period: "1ヶ月",
+    url: "",
+    images: [
+      "/Portfolio/IzakayaPortfolio/mockup.png",
+      "/Portfolio/IzakayaPortfolio/desktop.png",
+      "/Portfolio/IzakayaPortfolio/mobile.png",
     ],
   },
 };
 
-const portfolios = ["CorporatePortfolio_1"];
+const portfolios = [
+  "CorporatePortfolio_1",
+  "CoffeePortfolio",
+  "IzakayaPortfolio",
+];
 
 export async function generateStaticParams() {
   return portfolios.map((portfolio) => ({
@@ -67,7 +93,18 @@ export default async function Page({ params }) {
         <div className="flex flex-col items-start mt-10 whitespace-nowrap max-lg:px-10">
           <div>担当範囲 : {PortfolioItem.range}</div>
           <div className="my-[1em]">制作期間 : {PortfolioItem.period}</div>
-          <div>URL : {PortfolioItem.url}</div>
+          {PortfolioItem.url && (
+            <div>
+              <span>URL :</span>
+              <Link
+                href={PortfolioItem.url}
+                className="hover:underline"
+                target="_blank"
+              >
+                &nbsp;{PortfolioItem.url}
+              </Link>
+            </div>
+          )}
         </div>
       </section>
       <section className="h-full flex items-center lg:w-fit bg-stone-100 max-lg:flex-col lg:px-40 max-lg:w-full max-lg:py-10">
@@ -79,7 +116,7 @@ export default async function Page({ params }) {
           transition={{ duration: 1, ease: [0.5, 0, 1, 1] }}
         >
           <Image
-            src={"/Portfolio/CorporatePortfolio_1/mockups.png"}
+            src={PortfolioItem.images[0]}
             alt={"mockup img"}
             fill
             className="object-contain object-center"
@@ -93,7 +130,7 @@ export default async function Page({ params }) {
           transition={{ duration: 1, ease: [0.5, 0, 1, 1] }}
         >
           <Image
-            src={"/Portfolio/CorporatePortfolio_1/desktop.png"}
+            src={PortfolioItem.images[1]}
             alt={"desktop img"}
             fill
             className="object-cover object-center"
@@ -107,7 +144,7 @@ export default async function Page({ params }) {
           transition={{ duration: 1, ease: [0.5, 0, 1, 1] }}
         >
           <Image
-            src={"/Portfolio/CorporatePortfolio_1/mobile.png"}
+            src={PortfolioItem.images[2]}
             alt={"mobile img"}
             fill
             className="object-contain object-center"
