@@ -56,32 +56,32 @@ const Portfolios = () => {
         href={"/works/CorporatePortfolio_1"}
       />
       <IMacCustom
-        src={"/Portfolio/CorporatePortfolio_1/imac.png"}
-        title={"コーポレートサイト"}
-        href={"/works/CorporatePortfolio_1"}
+        src={"/Portfolio/CoffeePortfolio/imac.png"}
+        title={"珈琲店"}
+        href={"/works/CoffeePortfolio"}
       />
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
         コーポレートサイト
       </span>
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        コーポレートサイト
+        珈琲店
       </span>
       <IMacCustom
-        src={"/Portfolio/CoffeePortfolio/imac.png"}
-        title={"珈琲店"}
-        href={"/works/CoffeePortfolio"}
+        src={"/Portfolio/SalonPortfolio/imac.png"}
+        title={"美容室"}
+        href={"/works/SalonPortfolio"}
       />
       <IMacCustom
-        src={"/Portfolio/CoffeePortfolio/imac.png"}
-        title={"珈琲店"}
-        href={"/works/CoffeePortfolio"}
+        src={"/Portfolio/ClinicPortfolio_1/imac.png"}
+        title={"歯医者"}
+        href={"/works/ClinicPortfolio_1"}
       />
 
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        珈琲店
+        美容室
       </span>
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        珈琲店
+        歯医者
       </span>
 
       <IMacCustom
@@ -90,16 +90,16 @@ const Portfolios = () => {
         href={"/works/IzakayaPortfolio"}
       />
       <IMacCustom
-        src={"/Portfolio/IzakayaPortfolio/imac.png"}
-        title={"居酒屋"}
-        href={"/works/IzakayaPortfolio"}
+        src={"/Portfolio/ClinicPortfolio_2/imac.png"}
+        title={"歯医者_2"}
+        href={"/works/ClinicPortfolio_2"}
       />
 
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
         居酒屋
       </span>
       <span className="w-full bg-primary h-fit px-8 text-body md:hidden font-semibold py-2 text-center">
-        居酒屋
+        歯医者_2
       </span>
     </div>
   );

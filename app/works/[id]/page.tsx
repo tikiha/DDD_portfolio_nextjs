@@ -39,12 +39,48 @@ const PortfoliosList = {
       "/Portfolio/IzakayaPortfolio/mobile.png",
     ],
   },
+  SalonPortfolio: {
+    title: "美容室",
+    range: "デザイン・コーディング",
+    period: "1ヶ月",
+    url: "",
+    images: [
+      "/Portfolio/SalonPortfolio/mockup.png",
+      "/Portfolio/SalonPortfolio/desktop.png",
+      "/Portfolio/SalonPortfolio/mobile.png",
+    ],
+  },
+  ClinicPortfolio_1: {
+    title: "歯医者_1",
+    range: "デザイン・コーディング",
+    period: "1ヶ月",
+    url: "",
+    images: [
+      "/Portfolio/ClinicPortfolio_1/mockup.png",
+      "/Portfolio/ClinicPortfolio_1/desktop.png",
+      "/Portfolio/ClinicPortfolio_1/mobile.png",
+    ],
+  },
+  ClinicPortfolio_2: {
+    title: "歯医者_2",
+    range: "デザイン・コーディング",
+    period: "1ヶ月",
+    url: "",
+    images: [
+      "/Portfolio/ClinicPortfolio_2/mockup.png",
+      "/Portfolio/ClinicPortfolio_2/desktop.png",
+      "/Portfolio/ClinicPortfolio_2/mobile.png",
+    ],
+  },
 };
 
 const portfolios = [
   "CorporatePortfolio_1",
   "CoffeePortfolio",
   "IzakayaPortfolio",
+  "SalonPortfolio",
+  "ClinicPortfolio_1",
+  "ClinicPortfolio_2",
 ];
 
 export async function generateStaticParams() {

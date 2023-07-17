@@ -6,6 +6,7 @@ import NavBar from "@/components/NavBar/NavBar";
 import NavFooter from "@/components/NavFooter";
 import { Noto_Sans_JP, Montserrat } from "next/font/google";
 import { Metadata } from "next";
+import LPAnimation from "@/components/LPAnimation";
 
 const notojp = Noto_Sans_JP({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body
         className={`min-h-[calc(100vh-14px)] text-dark bg-light ${mont.variable} ${notojp.variable} font-notojp `}
       >
+        <LPAnimation />
         <NavBar />
         {children}
         <NavFooter />
