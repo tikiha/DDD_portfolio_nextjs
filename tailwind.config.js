@@ -38,6 +38,7 @@ module.exports = {
         light: "var(--background-color)",
         primary: "var(--primary-color)",
         secondary: "var(--secondary-color)",
+        Primary: "var(--Primary-color)",
         mute: "#a9a9a9",
         Light: "#fcfcfc",
         Dark: "#222",
