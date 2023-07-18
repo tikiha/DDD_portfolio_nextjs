@@ -9,7 +9,8 @@ import { DDDLogo } from "../Icons";
 import ThemeSwitcher from "../ThemeSwitch/ThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
-  const pathname = usePathname();
+  const fullname = usePathname();
+  const pathname = "/" + fullname?.split("/")[1];
   return (
     <Link
       href={href}

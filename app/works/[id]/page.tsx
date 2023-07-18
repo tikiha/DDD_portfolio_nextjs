@@ -104,6 +104,16 @@ export default async function Page({ params }) {
   const PortfolioItem = PortfoliosList[portfolio];
   const [windowWidth, setWindowWidth] = useState<number>();
 
+  const [imageAspect, setImageAspect] = useState("");
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = PortfolioItem.images[1];
+    img.onload = function () {
+      setImageAspect(`${img.width}/${img.height}`);
+    };
+  }, [PortfolioItem, imageAspect]);
+
   useEffect(() => {
     // Check for window object
     if (typeof window !== "undefined") {
@@ -159,7 +169,8 @@ export default async function Page({ params }) {
           />
         </motion.div>
         <motion.div
-          className="h-2/3 aspect-video relative lg:border-r border-separate max-lg:border-b max-lg:w-full"
+          className={`h-2/3 relative lg:border-r border-separate max-lg:border-b max-lg:w-full`}
+          style={{ aspectRatio: imageAspect }}
           initial={initialProps}
           whileInView={{ clipPath: "inset(0 0 0 0)" }}
           viewport={{ once: true }}
@@ -169,7 +180,7 @@ export default async function Page({ params }) {
             src={PortfolioItem.images[1]}
             alt={"desktop img"}
             fill
-            className="object-cover object-center"
+            className="object-contain object-center"
           />
         </motion.div>
         <motion.div
