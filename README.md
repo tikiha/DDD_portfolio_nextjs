@@ -1,4 +1,4 @@
-This is on ['DDD'](https://drivendesignduo.com/)
+This is on [https://drivendesignduo.com](https://drivendesignduo.com/)
 
 ## Getting Started
 
